@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <meta name="robots" content="noindex, nofollow" /><!-- TESTPHASE-NOINDEX: remove at go-live -->
 <title>Vibe Driven Ai — Breakthrough Modeling</title>
-<meta name="description" content="The anti-pattern: AI steps that are non-deterministic, unspecified and ungated." />
+<meta name="description" content="The anti-pattern: AI dropped into pipelines with no specification, no determinism and no gate — reliable only by hope. The foil to model-driven AI." />
 <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml" />
 <link rel="stylesheet" href="../assets/site.css" />
 </head>
@@ -23,13 +23,16 @@
 <div class="hero wrap" style="padding-bottom:20px">
   <div class="eyebrow">AI & innovation (anti-pattern)</div>
   <h1>Vibe Driven Ai</h1>
-  <p class="sub">The anti-pattern: AI steps that are non-deterministic, unspecified and ungated.</p>
+  <p class="sub">The anti-pattern: AI dropped into pipelines with no specification, no determinism and no gate — reliable only by hope. The foil to model-driven AI.</p>
 </div>
 <section class="wrap">
-
-<p>The failure mode where AI is dropped into pipelines with no specification, no determinism and no gate — reliable only by hope. The foil to Model-Driven AI.</p>
-<p><strong>Where it lives:</strong> Draft 2026-06-17 (From Vibe-Driven to Model-Driven AI).</p>
-
+<figure class="c-hero"><img src="assets/vibe-driven-ai-hero.png" alt="Vibe Driven Ai" loading="eager" /></figure>
+<p>> The anti-pattern: AI dropped into pipelines with no specification, no determinism and no gate — reliable only by hope. The foil to model-driven AI.</p>
+<p>Vibe-driven AI is the failure mode this whole approach exists to avoid. It is what happens when AI gets dropped into a pipeline with <strong>no specification, no determinism and no gate</strong>: a prompt, a plausible-looking result, and a shrug. It works in the demo, drifts in the second run, and no one can say why the output changed &mdash; because nothing pinned it. Reliable only by hope is not reliable at all.</p>
+<p>The tell is that you can&rsquo;t reproduce it. Run the same step twice and get two different answers; change something upstream and there&rsquo;s no gate that catches the break. It feels fast because it skips the structure, and it is fast &mdash; right up until it silently produces the wrong number in production and no lineage can explain it.</p>
+<p>The foil is <strong>model-driven AI</strong>: the same power, but the AI works from structured metadata, generates deterministically, and passes through a completeness gate before anything ships. Same speed, minus the hoping. Naming the anti-pattern is useful precisely because it&rsquo;s seductive &mdash; it is the easy path, and knowing its shape is how you stay off it.</p>
+<p><strong>Where it lives:</strong> the AI &amp; innovation edge of Breakthrough Modeling &mdash; the anti-pattern to design against.</p>
+<div class="c-rel c-key"><h3>Key concepts</h3><ul><li><a href="model-driven-data-engineering.html">Model Driven Data Engineering</a></li><li><a href="structure-beats-magic.html">Structure Beats Magic</a></li></ul></div>
   <p style="margin-top:34px"><a href="index.html">&larr; All concepts</a></p>
 </section>
 <footer><div class="wrap">
