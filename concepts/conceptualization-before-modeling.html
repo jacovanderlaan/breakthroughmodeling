@@ -12,9 +12,9 @@
 <body>
 <header class="site">
   <div class="wrap">
-    <a class="brand" href="/">Breakthrough Modeling <span class="abbr">BTM</span></a>
+    <a class="brand" href="../index.html">Breakthrough Modeling <span class="abbr">BTM</span></a>
     <nav class="main">
-      <a href="/">Home</a>
+      <a href="../index.html">Home</a>
       <a href="index.html">Concepts</a>
       <a class="cta" href="https://structurebeatsmagic.com">The method &rarr;</a>
     </nav>
@@ -26,13 +26,14 @@
   <p class="sub">Data modeling starts at storage; conceptualization starts at meaning. Get the order wrong and you build a technically correct model of the wrong thing.</p>
 </div>
 <section class="wrap">
+
 <p>> Data modeling starts at storage; conceptualization starts at meaning. Get the order wrong and you build a technically correct model of the wrong thing.</p>
 <p>There is an order-of-operations error at the root of most data models, and Ronald Ross names it cleanly: data modeling is an engineering concern — it asks how records should be organized in a system — while *conceptualization* asks what the business actually means before any of that. Start at storage and you get a model of tables. Start at meaning and you get a model of the business that tables can then serve. Both produce a diagram; only one of them models the right thing.</p>
 <p>The sharpest way to see the difference is what data modeling routinely discards: the verbs. A table headed *customer, order, location* is silent on the relationships that give those nouns their point — does the customer *place* the order, *cancel* it, *dispute* it? Those verb-concepts are the chassis of meaning, and a model that drops them is communicatively impotent: the lines between boxes say "related, somehow" and leave both a human and a machine exactly where they started. Conceptualization keeps the verbs because the verbs *are* the meaning; the nouns are just where it attaches.</p>
 <p>This is also why a concept model is not a "conceptual data model." A conceptual data model is still a data model — entities and attributes, one abstraction level up from physical. A concept model operates in a different domain entirely: structured meaning, business vocabulary, and the disambiguation of what words mean, before the question of how to store any of it arises. Calling the first one "conceptual" is how organizations convince themselves they've done conceptualization when they've only done early-stage engineering.</p>
 <p>The payoff for getting the order right is durability. Concepts are more stable than any technology — they reflect how people think, not how machines store — which is why a well-built concept model outlives the platforms beneath it (one held up at ~90% accuracy twelve years on, while the databases under it were replaced twice). And it's the precondition for everything downstream: you cannot resolve data integration, or connect meaningfully to GenAI, using the same storage-first techniques that produced the fragmentation in the first place. Meaning first, then the model, then the machine — in that order, or you industrialize the wrong thing.</p>
 <p><strong>Where it lives:</strong> the semantics layer — the discipline semantic design and semantic modeling operationalize, and the order that keeps a model out of <a href="the-semantic-layer-blackhole.html">the semantic layer blackhole</a>. (Anchored in Ronald Ross, *Inside the Mind of an Organization*.)</p>
-<div class="callout" style="margin-top:30px"><p><strong>Related concepts:</strong> <a href="the-semantic-layer-blackhole.html">The Semantic Layer Blackhole</a></p></div>
+<div class="c-rel"><h3>Related concepts</h3><ul><li><a href="the-semantic-layer-blackhole.html">The Semantic Layer Blackhole</a></li></ul></div>
   <p style="margin-top:34px"><a href="index.html">&larr; All concepts</a></p>
 </section>
 <footer><div class="wrap">
