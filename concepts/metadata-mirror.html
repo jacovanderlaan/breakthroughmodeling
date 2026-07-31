@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="robots" content="noindex, nofollow" /><!-- TESTPHASE-NOINDEX: remove at go-live -->
+<title>Metadata Mirror — Breakthrough Modeling</title>
+<meta name="description" content="The metadata files, read into a fast database (like DuckDB) as a queryable mirror — files stay the source of truth, the database is the reflection that apps and queries run against." />
+<link rel="icon" href="../assets/favicon.svg" type="image/svg+xml" />
+<link rel="stylesheet" href="../assets/site.css" />
+</head>
+<body>
+<header class="site">
+  <div class="wrap">
+    <a class="brand" href="../index.html">Breakthrough <span class="abbr">Modeling</span></a>
+    <nav class="main">
+      <a href="../index.html">Home</a>
+      <a href="index.html">Concepts</a>
+      <a class="cta" href="https://structurebeatsmagic.com">The method &rarr;</a>
+    </nav>
+  </div>
+</header>
+<div class="hero wrap" style="padding-bottom:20px">
+  <div class="eyebrow"><span class="key-badge">Key concept</span> Metadata OS</div>
+  <h1>Metadata Mirror</h1>
+  <p class="sub">The metadata files, read into a fast database (like DuckDB) as a queryable mirror — files stay the source of truth, the database is the reflection that apps and queries run against.</p>
+</div>
+<section class="wrap">
+<figure class="c-hero"><img src="assets/metadata-mirror-hero.png" alt="Metadata Mirror" loading="eager" /></figure>
+<p>> The metadata files, read into a fast database (like DuckDB) as a queryable mirror — files stay the source of truth, the database is the reflection that apps and queries run against.</p>
+<p>Once the knowledge is captured as metadata files, you need to be able to *query* it at speed &mdash; and markdown-in-folders isn&rsquo;t a query engine. The metadata mirror solves this: the files are read into a fast analytical database, typically DuckDB, that reflects their content. The crucial rule is directionality &mdash; <strong>files stay the source of truth, the database is the mirror.</strong> You never edit the database directly; you edit the files (in git, reviewable) and regenerate the reflection. That keeps the human-editable curation layer authoritative while giving everything downstream a fast, structured surface to run against.</p>
+<p>The mirror is what makes the brain usable. Apps read from it, <a href="brain-access-via-mcp.html">MCP servers</a> query it, analysts join across it &mdash; all at database speed, all from a reflection that was generated, not hand-maintained. Because it&rsquo;s regenerated from files, it can never silently drift: if the mirror is wrong, the files are wrong, and the files are where you fix it.</p>
+<p>This is the pattern the whole ecosystem uses (concepts, the metadata model, the demo browser): <a href="metadata-first.html">metadata</a> as files = truth, DuckDB as the queryable spiegel. Structure once, reflect fast, query everything.</p>
+<p><strong>Where it lives:</strong> the metadata OS &mdash; files as truth, a fast database as the queryable reflection.</p>
+<div class="c-rel c-key"><h3>Key concepts</h3><ul><li><a href="btm-pipeline.html">Btm Pipeline</a></li><li><a href="metadata-first.html">Metadata First</a></li><li><a href="scrape-to-metadata.html">Scrape To Metadata</a></li><li><a href="brain-access-via-mcp.html">Brain Access Via Mcp</a></li></ul></div>
+  <p style="margin-top:34px"><a href="index.html">&larr; All concepts</a></p>
+</section>
+<footer><div class="wrap">
+  <p><span class="badge">Test phase</span> &nbsp; Part of the <a href="https://structurebeatsmagic.com">Structure Beats Magic</a> family.</p>
+</div></footer>
+</body>
+</html>
