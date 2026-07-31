@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="robots" content="noindex, nofollow" /><!-- TESTPHASE-NOINDEX: remove at go-live -->
+<title>Map Of Content — Breakthrough Modeling</title>
+<meta name="description" content="A curated navigation hub per theme — the human-readable entry point that also gives AI a traversable path into the model." />
+<link rel="icon" href="../assets/favicon.svg" type="image/svg+xml" />
+<link rel="stylesheet" href="../assets/site.css" />
+</head>
+<body>
+<header class="site">
+  <div class="wrap">
+    <a class="brand" href="../index.html">Breakthrough <span class="abbr">Modeling</span></a>
+<nav class="main">
+<div class="navgroup"><a class="navtop" href="../impasse/index.html">The impasse</a><div class="submenu">
+<a href="../impasse/index.html">The impasse</a>
+<a href="../return/index.html">Why modeling came back</a>
+<a href="../process/index.html">The process is stuck too</a>
+</div></div>
+<div class="navgroup"><a class="navtop" href="../breakthrough/index.html">The breakthrough</a><div class="submenu">
+<a href="../breakthrough/index.html">The breakthrough</a>
+<a href="../old-wine/index.html">Old wine in new bottles?</a>
+<a href="../what-it-is/index.html">What BTM actually is</a>
+</div></div>
+<div class="navgroup"><a class="navtop" href="../model/index.html">The model</a><div class="submenu">
+<a href="../model/index.html">The model behind it</a>
+<a href="../more-than-structure/index.html">More than a data model</a>
+<a href="../attitude/index.html">A new attitude</a>
+</div></div>
+<div class="navgroup"><a class="navtop on" href="../concepts/index.html">Library</a><div class="submenu">
+<a href="../concepts/index.html">Concepts</a>
+</div></div>
+<div class="navgroup"><a class="navtop" href="../wake-up/index.html">About</a><div class="submenu">
+<a href="../wake-up/index.html">The wake-up call</a>
+<a href="../workshops/index.html">Workshops</a>
+<a href="../references.html">References</a>
+<a href="../news/index.html">News</a>
+</div></div>
+<a class="cta" href="https://structurebeatsmagic.com">The family &rarr;</a></nav>
+  </div>
+</header>
+<div class="hero wrap" style="padding-bottom:20px">
+  <div class="eyebrow"><span class="key-badge">Key concept</span> Knowledge structure</div>
+  <h1>Map Of Content</h1>
+  <p class="sub">A curated navigation hub per theme — the human-readable entry point that also gives AI a traversable path into the model.</p>
+</div>
+<section class="wrap">
+
+<p>A <strong>Map of Content</strong> is a curated hub for one theme: it does not hold the content, it holds the *routes to* the content. One file that answers "what belongs to this subject, and how does it hang together" — maintained by a human, readable by a machine.</p>
+<p>Borrowed vocabulary (Nick Milo / LYT), used deliberately: the term is established in the PKM field, so it needs no explanation. What BTM adds is the <strong>second reader</strong>.</p>
+<h3>Why it is a BTM concept, not just a note-taking trick</h3>
+<p>Most knowledge systems have two failure modes. Either everything is filed in folders — findable only if you already know where you put it — or everything is dumped in a search index, where you retrieve fragments but never the *shape* of a subject. A MOC is the deliberate third option: <strong>a hand-made map that survives both.</strong></p>
+<p>The BTM twist: a MOC is written for a human *and* for an AI. The same file that lets Jaco navigate his own domain gives an agent a <strong>traversable path</strong> — from theme → key files → source data → provenance. Structured navigation beats semantic guessing, which is <a href="structure-beats-magic.html">Structure Beats Magic</a> applied to knowledge rather than to pipelines. An LLM turned loose on 80.000 files retrieves plausible fragments; an LLM that reads the MOC first knows what the subject *is* before it starts searching.</p>
+<h3>What makes a MOC (and what breaks it)</h3>
+<p>| Do | Don't |
+|---|---|
+| Link to source files; keep them the truth | Copy content into the MOC — it goes stale |
+| One theme, explicitly scoped | A catch-all "misc" MOC nobody maintains |
+| Say *why* a file belongs, not just *that* it does | A bare bullet list of links |
+| Let MOCs overlap — a file may sit in several | Force a strict tree; knowledge isn't one |
+| Mark it machine-readably (`type: MOC` in frontmatter) | Encode meaning only in the filename |
+| Retire it when the theme dies (`3-history/`) | Keep zombie hubs that mislead |</p>
+<p>The frontmatter marker is the part people skip and shouldn't. `type: MOC` makes the whole set <strong>queryable</strong> — every hub in the system can be listed, counted, checked for staleness, and mirrored into a database. A convention that only lives in filenames is a convention an agent cannot use.</p>
+<h3>Where it fits in BTM</h3>
+<p>A MOC is the <strong>human-curated layer above the generated one</strong>. BTM generates a great deal — models, diagrams, ADRs, features, releases. Generation scales; comprehension doesn't. The MOC is where a person states what matters and why, so the generated mass stays navigable. It is the same instinct as *eat your own dogfood* and *document your own system*: the output has to remain readable by both audiences, or the volume becomes a liability.</p>
+<p>That makes MOCs a <strong>guard rail</strong>, not decoration. When a system produces faster than a human can read, the curated map is what keeps the whole thing understandable — and keeps the AI honest about provenance, because `derived_from` links are MOC links.</p>
+<p><strong>Where it lives:</strong> `D:/vault/personal/index/` (20 MOCs, `type: MOC`) · convention recorded 31 Jul 2026 in `index.md`.</p>
+
+  <p style="margin-top:34px"><a href="index.html">&larr; All concepts</a></p>
+</section>
+<footer><div class="wrap">
+  <p><span class="badge">Test phase</span> &nbsp; Part of the <a href="https://structurebeatsmagic.com">Structure Beats Magic</a> family.</p>
+</div></footer>
+</body>
+</html>
