@@ -2,14 +2,12 @@
 <html lang="en"><head><meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <meta name="robots" content="noindex, nofollow" /><!-- TESTPHASE-NOINDEX -->
-<title>The model behind it — Breakthrough Modeling</title>
-<meta name="description" content="The model behind it" />
-<link rel="canonical" href="https://breakthroughmodeling.com/model/" />
-<meta property="og:title" content="The model behind it — Breakthrough Modeling" />
-<meta property="og:description" content="The model behind it" />
-<meta property="og:type" content="article" />
-<meta property="og:url" content="https://breakthroughmodeling.com/model/" />
-<meta property="og:site_name" content="Breakthrough Modeling" />
+<title>Terms — Breakthrough Modeling</title>
+<meta name="description" content="Terms on Breakthrough Modeling — filter, sort and browse." />
+<link rel="canonical" href="https://breakthroughmodeling.com/glossary/" />
+<meta property="og:title" content="Terms — Breakthrough Modeling" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://breakthroughmodeling.com/glossary/" />
 <meta name="twitter:card" content="summary" />
 <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml" />
 <link rel="stylesheet" href="../assets/site.css" /></head>
@@ -37,21 +35,29 @@
 <a href="../news/index.html">News</a>
 </span></span>
 <a class="cta" href="https://structurebeatsmagic.com">The family &rarr;</a></nav></div></header>
-<div class="wrap pagewrap">
-<main class="pagebody">
-<div class="eyebrow">The idea</div>
-<h1>The model behind it</h1>
-
-
-  <p>The metadata model underneath it is real and runnable: <strong>268 tables across 16 subject areas</strong> &mdash; structure, transformation logic, temporality, quality, lineage, governance and knowledge, all as queryable data rather than code buried in tools.</p>
-  <div class="cta-row">
-    <a class="btn" href="https://structuredmetadata.com">Explore the full metadata model &rarr;</a>
-  </div>
-  <p class="muted">MDDE &mdash; model-driven data engineering &mdash; is the generation side of this: a component of BTM, not the whole of it.</p>
-
-</main></div>
-<footer><div class="wrap"><p><span class="badge">Test phase</span> &nbsp; Breakthrough Modeling &mdash;
-the visual layer of <a href="https://breakthroughmodeling.com">Breakthrough Modeling</a>.
-Part of the <a href="https://structurebeatsmagic.com">Structure Beats Magic</a> family.</p>
-<p class="muted">Structure beats magic. &copy; Jaco van der Laan.</p></div></footer>
+<div class="hero wrap" style="padding-bottom:16px">
+  <div class="eyebrow">Listing</div>
+  <h1>Terms</h1>
+</div>
+<section class="wrap">
+<div id="browse" data-page-type="glossary"></div>
+<div class="bw-fallback">
+  <p class="muted">All items:</p>
+  <ul class="artlist">
+    <li><a href="../glossary/index.html">glossary-mdde</a> — <span class="muted">MDDE-only glossary terms — the non-concept vocabulary specific to Model-Driven Data Engineering (enterprise da</span></li>
+    <li><a href="../glossary/index.html">glossary-shared</a> — <span class="muted">Shared SBM/MDDE glossary — the non-concept vocabulary both audiences need. Substrate terms (markdown, YAML, da</span></li>
+  </ul>
+</div>
+<script type="module">
+  import { initBrowse } from "../assets/browse.js";
+  initBrowse("#browse", {
+    data: "../data/content_item.parquet",
+    base: "../",
+    assets: "../concepts/assets/",
+    pageType: "glossary"
+  }).then(() => document.body.classList.add("bw-ready"));
+</script>
+</section>
+<footer><div class="wrap"><p><span class="badge">Test phase</span> &nbsp;
+Part of the <a href="https://structurebeatsmagic.com">Structure Beats Magic</a> family.</p></div></footer>
 </body></html>
