@@ -135,7 +135,7 @@ INDEX = """<!doctype html>
 </div>
 <section class="wrap">
 {groups}
-  <p style="margin-top:34px"><a href="/">&larr; Back home</a></p>
+  <p style="margin-top:34px"><a href="../index.html">&larr; Back home</a></p>
 </section>
 <footer><div class="wrap">
   <p><span class="badge">Test phase</span> &nbsp; Part of the <a href="https://structurebeatsmagic.com">Structure Beats Magic</a> family.</p>
