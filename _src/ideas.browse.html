@@ -1,0 +1,27 @@
+<div id="browse" data-page-type="ideas"></div>
+<div class="bw-fallback">
+  <p class="muted">All items:</p>
+  <ul class="artlist">
+    <li>76 concepts is a lot for one flat index &mdash; <span class="muted">Grouping or a key-concepts tier; the reader needs an entry point</span></li>
+    <li>Article footers — related articles / concepts / terms</li>
+    <li>BUILD.md runbook &mdash; <span class="muted">done 31 jul — rules/site-build/BUILD.md.</span></li>
+    <li>Domain confirmed breakthroughmodeling.com is live (HTTP 200) — decide the launch moment</li>
+    <li>Full-site link validation &mdash; <span class="muted">done 31 jul — 105 pages, 3,039 links, 0 broken.</span></li>
+    <li>Glossary section — terms vs concepts</li>
+    <li>Is BTM the offering or the umbrella?</li>
+    <li>Method walkthrough — one worked example end to end</li>
+    <li>Multi-page IA (ADR-127)</li>
+    <li>NOINDEX removal — when does BTM go live to search</li>
+    <li>Orphan-page pruning &mdash; <span class="muted">done 31 jul — ported; pruned 8 on the first run.</span></li>
+    <li>Site out of sync with its source of truth &mdash; <span class="muted">done 31 jul — now 90/90, 0 orphans. Root cause was an undocumented slug list + a sitekey bug.</span></li>
+  </ul>
+</div>
+<script type="module">
+  import { initBrowse } from "../assets/browse.js";
+  initBrowse("#browse", {
+    data: "../data/content_item.parquet",
+    base: "../",
+    assets: "../concepts/assets/",
+    pageType: "ideas"
+  }).then(() => document.body.classList.add("bw-ready"));
+</script>

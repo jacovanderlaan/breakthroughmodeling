@@ -2,12 +2,12 @@
 <html lang="en"><head><meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <meta name="robots" content="noindex, nofollow" /><!-- TESTPHASE-NOINDEX -->
-<title>Terms — Breakthrough Modeling</title>
-<meta name="description" content="Terms on Breakthrough Modeling — filter, sort and browse." />
-<link rel="canonical" href="https://breakthroughmodeling.com/glossary/" />
-<meta property="og:title" content="Terms — Breakthrough Modeling" />
+<title>Anti-patterns — Breakthrough Modeling</title>
+<meta name="description" content="Anti-patterns on Breakthrough Modeling — filter, sort and browse." />
+<link rel="canonical" href="https://breakthroughmodeling.com/anti-patterns/" />
+<meta property="og:title" content="Anti-patterns — Breakthrough Modeling" />
 <meta property="og:type" content="website" />
-<meta property="og:url" content="https://breakthroughmodeling.com/glossary/" />
+<meta property="og:url" content="https://breakthroughmodeling.com/anti-patterns/" />
 <meta name="twitter:card" content="summary" />
 <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml" />
 <link rel="stylesheet" href="../assets/site.css" /></head>
@@ -42,15 +42,21 @@
 <a class="cta" href="https://structurebeatsmagic.com">The family &rarr;</a></nav></div></header>
 <div class="hero wrap" style="padding-bottom:16px">
   <div class="eyebrow">Listing</div>
-  <h1>Terms</h1>
+  <h1>Anti-patterns</h1>
 </div>
 <section class="wrap">
-<div id="browse" data-page-type="glossary"></div>
+<div id="browse" data-page-type="anti-patterns"></div>
 <div class="bw-fallback">
   <p class="muted">All items:</p>
   <ul class="artlist">
-    <li>glossary-mdde &mdash; <span class="muted">MDDE-only glossary terms — the non-concept vocabulary specific to Model-Driven Data Engineering (enterprise da</span></li>
-    <li>glossary-shared &mdash; <span class="muted">Shared SBM/MDDE glossary — the non-concept vocabulary both audiences need. Substrate terms (markdown, YAML, da</span></li>
+    <li><a href="../concepts/coupled-by-default.html">Coupled by default</a> &mdash; <span class="muted">The anti-pattern: systems reach into each other&#x27;s internals because nothing stopped them — dependencies nobody</span></li>
+    <li><a href="../concepts/decision-black-box.html">Decision black box</a> &mdash; <span class="muted">The anti-pattern: the outcome was recorded, the reasoning was not — so every decision has to be re-argued from</span></li>
+    <li><a href="../concepts/documentation-theatre.html">Documentation theatre</a> &mdash; <span class="muted">The anti-pattern: documentation produced to satisfy a process rather than a reader — complete, compliant, and </span></li>
+    <li><a href="../concepts/fragmented-schools-of-thought.html">Fragmented schools of thought</a> &mdash; <span class="muted">The anti-pattern: a discipline splits into rival interpretations of the same method, and practitioners spend t</span></li>
+    <li><a href="../concepts/gated-knowledge.html">Gated knowledge</a> &mdash; <span class="muted">The anti-pattern: understanding locked behind a person, a licence or a login — access controlled by whoever ho</span></li>
+    <li><a href="../concepts/local-tidiness.html">Local tidiness</a> &mdash; <span class="muted">The anti-pattern: every folder looks reasonable up close, and nobody can say what the system is. Order without</span></li>
+    <li><a href="../concepts/model-as-drawing.html">Model as drawing</a> &mdash; <span class="muted">The anti-pattern: treating the model as a picture to be drawn rather than knowledge to be captured — so it inf</span></li>
+    <li><a href="../concepts/social-cost-of-method.html">Social cost of method</a> &mdash; <span class="muted">The anti-pattern: a method&#x27;s vocabulary becomes insider language, splitting the team into those who can follow</span></li>
   </ul>
 </div>
 <script type="module">
@@ -59,7 +65,7 @@
     data: "../data/content_item.parquet",
     base: "../",
     assets: "../concepts/assets/",
-    pageType: "glossary"
+    pageType: "anti-patterns"
   }).then(() => document.body.classList.add("bw-ready"));
 </script>
 </section>
