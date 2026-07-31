@@ -1,0 +1,17 @@
+<div id="browse" data-page-type="decisions"></div>
+<div class="bw-fallback">
+  <p class="muted">All items:</p>
+  <ul class="artlist">
+    <li>ADR 124 concept publishing to multiple sites &mdash; <span class="muted">Accepted — 2026-07-31. Bouwt op ADR-080-folder-per-concept (folder-per-concept) en de SBM/MDDE folder-per-unit</span></li>
+    <li>File → DuckDB derivation — write-through edits + auto-refresh (single-writer, file-is-truth) &mdash; <span class="muted">Beacon&#x27;s data-integration pattern (ADR-114) is: files → importer → DuckDB → read-only endpoint → entityView, w</span></li>
+  </ul>
+</div>
+<script type="module">
+  import { initBrowse } from "../assets/browse.js";
+  initBrowse("#browse", {
+    data: "../data/content_item.parquet",
+    base: "../",
+    assets: "../concepts/assets/",
+    pageType: "decisions"
+  }).then(() => document.body.classList.add("bw-ready"));
+</script>
