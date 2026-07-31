@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="robots" content="noindex, nofollow" /><!-- TESTPHASE-NOINDEX: remove at go-live -->
+<title>Delivery Calendars — Breakthrough Modeling</title>
+<meta name="description" content="Model the time rhythm of deliveries — when each is due, how often — so 'the delivery is late' becomes a query the system answers on its own." />
+<link rel="icon" href="../assets/favicon.svg" type="image/svg+xml" />
+<link rel="stylesheet" href="../assets/site.css" />
+</head>
+<body>
+<header class="site">
+  <div class="wrap">
+    <a class="brand" href="../index.html">Breakthrough Modeling <span class="abbr">BTM</span></a>
+    <nav class="main">
+      <a href="../index.html">Home</a>
+      <a href="index.html">Concepts</a>
+      <a class="cta" href="https://structurebeatsmagic.com">The method &rarr;</a>
+    </nav>
+  </div>
+</header>
+<div class="hero wrap" style="padding-bottom:20px">
+  <div class="eyebrow"><span class="key-badge">Key concept</span> Delivery & method</div>
+  <h1>Delivery Calendars</h1>
+  <p class="sub">Model the time rhythm of deliveries — when each is due, how often — so 'the delivery is late' becomes a query the system answers on its own.</p>
+</div>
+<section class="wrap">
+<figure class="c-hero"><img src="assets/delivery-calendars-hero.png" alt="Delivery Calendars" loading="eager" /></figure>
+<p>> Model the time rhythm of deliveries — when each is due, how often — so 'the delivery is late' becomes a query the system answers on its own.</p>
+<p>A delivery calendar models the <strong>time rhythm</strong> of the data flowing between systems: this feed is daily by 06:00, that one is monthly on the third working day, this other one is event-driven with a maximum gap. Once the expected timing is data rather than tribal knowledge, lateness stops being something a human notices by accident. &ldquo;Which deliveries are overdue right now?&rdquo; becomes a query, and an alert can fire the moment a window closes without the data arriving.</p>
+<p>This is what turns timing from a source of quiet failures into a monitored guarantee. Without a calendar, a feed that silently stops is discovered when a downstream number looks wrong; with a calendar, the absence itself is the signal, caught at the boundary and attributed to the right system. It is the temporal half of a <a href="data-contracts.html">contract</a>: the contract says *what* and *how good*, the calendar says *when*.</p>
+<p>Calendars pair with <a href="data-deliveries.html">deliveries</a> and <a href="incident-modeling.html">incident modeling</a>: the calendar sets the expectation, the delivery is the event, and a missed window becomes a tracked incident with an owner. Modeled as metadata, delivery timing is one more thing you can ask the platform about instead of hoping someone is watching.</p>
+<p><strong>Where it lives:</strong> the delivery layer of Breakthrough Modeling &mdash; when data is due, as data.</p>
+<div class="c-rel c-key"><h3>Key concepts</h3><ul><li><a href="data-deliveries.html">Data Deliveries</a></li><li><a href="data-contracts.html">Data Contracts</a></li><li><a href="data-observability.html">Data Observability</a></li><li><a href="incident-modeling.html">Incident Modeling</a></li></ul></div>
+  <p style="margin-top:34px"><a href="index.html">&larr; All concepts</a></p>
+</section>
+<footer><div class="wrap">
+  <p><span class="badge">Test phase</span> &nbsp; Part of the <a href="https://structurebeatsmagic.com">Structure Beats Magic</a> family.</p>
+</div></footer>
+</body>
+</html>
