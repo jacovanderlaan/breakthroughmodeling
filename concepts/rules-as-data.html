@@ -6,13 +6,20 @@
 <meta name="robots" content="noindex, nofollow" /><!-- TESTPHASE-NOINDEX: remove at go-live -->
 <title>Rules As Data — Breakthrough Modeling</title>
 <meta name="description" content="Constraints and logic expressed as data, not buried in code — rules say what must hold, versioned and enforceable, so quality and governance travel with the model." />
+<link rel="canonical" href="https://breakthroughmodeling.com/concepts/rules-as-data.html" />
+<meta property="og:title" content="Rules As Data" />
+<meta property="og:description" content="Constraints and logic expressed as data, not buried in code — rules say what must hold, versioned and enforceable, so quality and governance travel with the model." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://breakthroughmodeling.com/concepts/rules-as-data.html" />
+<meta property="og:site_name" content="Breakthrough Modeling" />
+<meta name="twitter:card" content="summary" />
 <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml" />
 <link rel="stylesheet" href="../assets/site.css" />
 </head>
 <body>
 <header class="site">
   <div class="wrap">
-    <a class="brand" href="../index.html"><svg viewBox="0 0 200 200" aria-hidden="true" focusable="false"><g fill="none" stroke="#2563eb" stroke-width="20" stroke-linecap="butt" stroke-linejoin="miter"><path d="M 150 20 L 20 20 L 20 150 L 110 150"/><path d="M 150 20 L 150 110"/></g><rect x="136" y="136" width="28" height="28" fill="#b88a1b" transform="rotate(45 150 150)"/></svg>Breakthrough <span class="abbr">Modeling</span></a>
+    <a class="brand" href="../index.html">Breakthrough <span class="abbr">Modeling</span></a>
 <nav class="main">
 <span class="navgroup"><button class="navtop" type="button" aria-haspopup="true">Overview</button><span class="navmenu">
 <a href="../overview/index.html#impasse">The impasse</a>
@@ -25,7 +32,7 @@
 <a href="../overview/index.html#more-than-structure">More than a data model</a>
 <a href="../overview/index.html#attitude">A new attitude</a>
 </span></span>
-<span class="navgroup"><button class="navtop" type="button" aria-haspopup="true">Methodology</button><span class="navmenu">
+<span class="navgroup"><button class="navtop on" type="button" aria-haspopup="true">Methodology</button><span class="navmenu">
 <a href="../concepts/index.html">Concepts</a>
 <a href="../patterns/index.html">Patterns</a>
 <a href="../glossary/index.html">Glossary</a>
@@ -39,7 +46,7 @@
 <a href="../skills/index.html">Skills</a>
 <a href="../decisions/index.html">Decisions</a>
 </span></span>
-<a href="../timeline/index.html">Timeline</a>
+<a class="navtop" href="../timeline/index.html">Timeline</a>
 <span class="navgroup"><button class="navtop" type="button" aria-haspopup="true">About</button><span class="navmenu">
 <a href="../about/index.html">About Jaco</a>
 <a href="../family/index.html">The family</a>
@@ -55,7 +62,7 @@
   <p class="sub">Constraints and logic expressed as data, not buried in code — rules say what must hold, versioned and enforceable, so quality and governance travel with the model.</p>
 </div>
 <section class="wrap">
-<figure class="c-hero"><img src="assets/rules-as-data-hero.png" alt="Rules As Data" loading="eager" /></figure>
+<figure class="c-hero"><img src="assets/rules-as-data-hero.webp" alt="Rules As Data" loading="eager" /></figure>
 <p>> Constraints and logic expressed as data, not buried in code — rules say what must hold, versioned and enforceable, so quality and governance travel with the model.</p>
 <p>Rules are the constraints and logic of a domain, written as <strong>data rather than buried in code</strong>: a validation rule, a business rule, a quality check, a governance policy. When a rule lives as structured metadata &mdash; an expression with a scope and a severity &mdash; it can be versioned, tested, enforced automatically, and asked about (&ldquo;which entities does this rule touch?&rdquo;). When it lives inside a stored procedure or someone&rsquo;s head, it drifts and no one can see it.</p>
 <p>This is the new role of the architect made concrete: instead of writing a PowerPoint that stays unread, you supply the rules in a technical, machine-readable format that actually drives the platform. The rule *is* the deliverable, and it runs. Governance stops being a document people are supposed to follow and becomes something that travels with the data and holds automatically.</p>
@@ -64,6 +71,10 @@
 <div class="c-rel c-key"><h3>Key concepts</h3><ul><li><a href="reusable-skills.html">Reusable Skills</a></li><li><a href="proven-patterns.html">Proven Patterns</a></li><li><a href="metadata-first.html">Metadata First</a></li></ul></div>
   <p style="margin-top:34px"><a href="index.html">&larr; All concepts</a></p>
 </section>
+<script type="module">
+  import { initDetail } from "../assets/detail.js";
+  initDetail();
+</script>
 <footer><div class="wrap">
   <p><span class="badge">Test phase</span> &nbsp; Part of the <a href="https://structurebeatsmagic.com">Structure Beats Magic</a> family.</p>
 </div></footer>

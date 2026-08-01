@@ -6,13 +6,20 @@
 <meta name="robots" content="noindex, nofollow" /><!-- TESTPHASE-NOINDEX: remove at go-live -->
 <title>Delivery Calendars — Breakthrough Modeling</title>
 <meta name="description" content="Model the time rhythm of deliveries — when each is due, how often — so 'the delivery is late' becomes a query the system answers on its own." />
+<link rel="canonical" href="https://breakthroughmodeling.com/concepts/delivery-calendars.html" />
+<meta property="og:title" content="Delivery Calendars" />
+<meta property="og:description" content="Model the time rhythm of deliveries — when each is due, how often — so 'the delivery is late' becomes a query the system answers on its own." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://breakthroughmodeling.com/concepts/delivery-calendars.html" />
+<meta property="og:site_name" content="Breakthrough Modeling" />
+<meta name="twitter:card" content="summary" />
 <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml" />
 <link rel="stylesheet" href="../assets/site.css" />
 </head>
 <body>
 <header class="site">
   <div class="wrap">
-    <a class="brand" href="../index.html"><svg viewBox="0 0 200 200" aria-hidden="true" focusable="false"><g fill="none" stroke="#2563eb" stroke-width="20" stroke-linecap="butt" stroke-linejoin="miter"><path d="M 150 20 L 20 20 L 20 150 L 110 150"/><path d="M 150 20 L 150 110"/></g><rect x="136" y="136" width="28" height="28" fill="#b88a1b" transform="rotate(45 150 150)"/></svg>Breakthrough <span class="abbr">Modeling</span></a>
+    <a class="brand" href="../index.html">Breakthrough <span class="abbr">Modeling</span></a>
 <nav class="main">
 <span class="navgroup"><button class="navtop" type="button" aria-haspopup="true">Overview</button><span class="navmenu">
 <a href="../overview/index.html#impasse">The impasse</a>
@@ -25,7 +32,7 @@
 <a href="../overview/index.html#more-than-structure">More than a data model</a>
 <a href="../overview/index.html#attitude">A new attitude</a>
 </span></span>
-<span class="navgroup"><button class="navtop" type="button" aria-haspopup="true">Methodology</button><span class="navmenu">
+<span class="navgroup"><button class="navtop on" type="button" aria-haspopup="true">Methodology</button><span class="navmenu">
 <a href="../concepts/index.html">Concepts</a>
 <a href="../patterns/index.html">Patterns</a>
 <a href="../glossary/index.html">Glossary</a>
@@ -39,7 +46,7 @@
 <a href="../skills/index.html">Skills</a>
 <a href="../decisions/index.html">Decisions</a>
 </span></span>
-<a href="../timeline/index.html">Timeline</a>
+<a class="navtop" href="../timeline/index.html">Timeline</a>
 <span class="navgroup"><button class="navtop" type="button" aria-haspopup="true">About</button><span class="navmenu">
 <a href="../about/index.html">About Jaco</a>
 <a href="../family/index.html">The family</a>
@@ -55,7 +62,7 @@
   <p class="sub">Model the time rhythm of deliveries — when each is due, how often — so 'the delivery is late' becomes a query the system answers on its own.</p>
 </div>
 <section class="wrap">
-<figure class="c-hero"><img src="assets/delivery-calendars-hero.png" alt="Delivery Calendars" loading="eager" /></figure>
+<figure class="c-hero"><img src="assets/delivery-calendars-hero.webp" alt="Delivery Calendars" loading="eager" /></figure>
 <p>> Model the time rhythm of deliveries — when each is due, how often — so 'the delivery is late' becomes a query the system answers on its own.</p>
 <p>A delivery calendar models the <strong>time rhythm</strong> of the data flowing between systems: this feed is daily by 06:00, that one is monthly on the third working day, this other one is event-driven with a maximum gap. Once the expected timing is data rather than tribal knowledge, lateness stops being something a human notices by accident. &ldquo;Which deliveries are overdue right now?&rdquo; becomes a query, and an alert can fire the moment a window closes without the data arriving.</p>
 <p>This is what turns timing from a source of quiet failures into a monitored guarantee. Without a calendar, a feed that silently stops is discovered when a downstream number looks wrong; with a calendar, the absence itself is the signal, caught at the boundary and attributed to the right system. It is the temporal half of a <a href="data-contracts.html">contract</a>: the contract says *what* and *how good*, the calendar says *when*.</p>
@@ -64,6 +71,10 @@
 <div class="c-rel c-key"><h3>Key concepts</h3><ul><li><a href="data-deliveries.html">Data Deliveries</a></li><li><a href="data-contracts.html">Data Contracts</a></li><li><a href="data-observability.html">Data Observability</a></li><li><a href="incident-modeling.html">Incident Modeling</a></li></ul></div>
   <p style="margin-top:34px"><a href="index.html">&larr; All concepts</a></p>
 </section>
+<script type="module">
+  import { initDetail } from "../assets/detail.js";
+  initDetail();
+</script>
 <footer><div class="wrap">
   <p><span class="badge">Test phase</span> &nbsp; Part of the <a href="https://structurebeatsmagic.com">Structure Beats Magic</a> family.</p>
 </div></footer>
