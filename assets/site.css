@@ -396,6 +396,8 @@ header.site .wrap{display:flex;align-items:center;justify-content:space-between;
   border:1px solid var(--line);border-radius:12px}
 .fig{margin:26px 0}
 .fig figcaption{margin-top:9px;font-size:.88rem;color:var(--muted);text-align:center}
+.model-figure{margin:22px 0 0}
+.model-figure img{display:block;width:100%;height:auto;border:1px solid var(--line);border-radius:14px}
 
 /* news */
 .news-item{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:24px 26px;margin-top:8px}
