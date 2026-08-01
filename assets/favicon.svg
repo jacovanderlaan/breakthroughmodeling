@@ -1,10 +1,21 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
-  <rect width="32" height="32" rx="7" fill="#0f172a"/>
-  <!-- BTM: three converging into one — the breakthrough arrow -->
-  <circle cx="8" cy="9" r="2.1" fill="#2563eb"/>
-  <circle cx="8" cy="16" r="2.1" fill="#2563eb"/>
-  <circle cx="8" cy="23" r="2.1" fill="#2563eb"/>
-  <path d="M11 9 L18 16 L11 23" fill="none" stroke="#93b4f5" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
-  <path d="M18 16 L25 16" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round"/>
-  <path d="M22.5 13 L25.5 16 L22.5 19" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+  <title>Breakthrough Modeling</title>
+  <!--
+    The mark: a square with its lower-right corner cut away on a true 45° line,
+    and the gold diamond emerging through the gap. Source of truth for the
+    geometry is W:/data/products/breakthroughmodeling/brand/logo/.
+
+    This is the favicon build: stroke 26 rather than 16 and a 44-unit diamond,
+    because at 16 px the display weights collapse and the diamond would render
+    as a single gold pixel. Keep the rounded dark tile from the previous icon —
+    it holds the shape together in a browser tab.
+  -->
+  <rect width="200" height="200" rx="44" fill="#0f172a"/>
+  <g fill="none" stroke="#2563eb" stroke-width="26"
+     stroke-linecap="butt" stroke-linejoin="miter">
+    <path d="M 140 40 L 40 40 L 40 140 L 100 140" />
+    <path d="M 140 40 L 140 100" />
+  </g>
+  <rect x="132" y="132" width="40" height="40" fill="#b88a1b"
+        transform="rotate(45 152 152)" />
 </svg>

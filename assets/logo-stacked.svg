@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 460" width="720" height="460"
+     role="img" aria-label="Breakthrough Modeling — Model anew.">
+  <title>Breakthrough Modeling</title>
+
+  <!--
+    Stacked primary lockup: mark above wordmark above tagline.
+
+    ⚠️ The type here is set as live text, not outlines. That keeps the file
+    editable and tiny, but it renders with whatever the viewer has installed.
+    For anything printed or embedded off-site, convert the <text> elements to
+    paths first (Inkscape: Path > Object to Path). The mark itself is pure
+    geometry and needs no such treatment.
+
+    Optical spacing, not mathematical: the gap under the mark is larger than the
+    gap under BREAKTHROUGH, because the mark reads as a heavier block. Setting
+    them equal makes the wordmark look like it is sliding off.
+  -->
+
+  <g transform="translate(260 20) scale(1.0)">
+    <!-- Mark: geometry identical to breakthrough-modeling-mark.svg -->
+    <g fill="none" stroke="#2563eb" stroke-width="16"
+       stroke-linecap="butt" stroke-linejoin="miter">
+      <path d="M 150 20 L 20 20 L 20 150 L 110 150" />
+      <path d="M 150 20 L 150 110" />
+    </g>
+    <rect x="136" y="136" width="28" height="28" fill="#b88a1b"
+          transform="rotate(45 150 150)" />
+  </g>
+
+  <!-- Wordmark. Hierarchy follows the site: BREAKTHROUGH ink, MODELING blue. -->
+  <text x="360" y="300" text-anchor="middle"
+        font-family="Helvetica Neue, Helvetica, Arial, sans-serif"
+        font-size="76" font-weight="700" letter-spacing="1"
+        fill="#0f172a">BREAKTHROUGH</text>
+
+  <text x="360" y="368" text-anchor="middle"
+        font-family="Helvetica Neue, Helvetica, Arial, sans-serif"
+        font-size="56" font-weight="400" letter-spacing="14"
+        fill="#2563eb">MODELING</text>
+
+  <!--
+    Tagline with flanking rules. At font-size 22 / letter-spacing 6 the text
+    measures ~225 px, so it spans x 247..473. The rules stop 24 px clear of
+    that on each side — enough daylight that they never strike through the
+    letters, which is what happened when they were set by eye.
+  -->
+  <g stroke="#b88a1b" stroke-width="2.5">
+    <line x1="150" y1="412" x2="223" y2="412" />
+    <line x1="497" y1="412" x2="570" y2="412" />
+  </g>
+  <text x="360" y="419" text-anchor="middle"
+        font-family="Helvetica Neue, Helvetica, Arial, sans-serif"
+        font-size="22" font-weight="600" letter-spacing="6"
+        fill="#b88a1b">MODEL ANEW.</text>
+</svg>

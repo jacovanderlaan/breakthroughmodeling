@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200"
+     role="img" aria-label="Breakthrough Modeling mark">
+  <title>Breakthrough Modeling</title>
+
+  <!--
+    Geometry, stated once so it holds at any size. Every angle is 90° or 45°.
+
+    Square      centre-line 20..150, stroke 16 (outer edge 12..158).
+    Cut         the line x + y = 260, a true 45° slice through the lower-right
+                corner. It meets the right edge at (150,110) and the bottom at
+                (110,150), so both open ends stop on the SAME line — one cut,
+                not two frayed ends. Opening is 57 units: wide enough to read,
+                tight enough that the corner still feels attached.
+    Diamond     a square rotated 45°, centred at (150,150) — on the diagonal
+                y = x, the same axis the cut's midpoint (130,130) sits on.
+                It is emerging THROUGH the gap, not parked beside it.
+    Clearance   the diamond's near vertex reaches (136,136); the cut passes
+                through (130,130). A hair of daylight on each flank, so the
+                shapes read as separate without drifting apart.
+
+    butt caps + miter joins + one stroke width = no tapering anywhere.
+  -->
+
+  <g fill="none" stroke="#2563eb" stroke-width="16"
+     stroke-linecap="butt" stroke-linejoin="miter">
+    <!-- Top and left edges, then the bottom run up to the cut. -->
+    <path d="M 150 20 L 20 20 L 20 150 L 110 150" />
+    <!-- The right edge, stopping on the same cut line. -->
+    <path d="M 150 20 L 150 110" />
+  </g>
+
+  <!-- Emerging along the axis of the cut. -->
+  <rect x="136" y="136" width="28" height="28" fill="#b88a1b"
+        transform="rotate(45 150 150)" />
+</svg>
