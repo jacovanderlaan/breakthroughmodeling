@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="robots" content="noindex, nofollow" /><!-- TESTPHASE-NOINDEX -->
+<title>Ensemble Modeling vs. Business-Oriented Data Modeling: Two Paths to Better Data Models — Breakthrough Modeling</title>
+<meta name="description" content="Hultgren gives you a model that survives change. Sharp gives you a model the business actually understands. You don&#x27;t have to choose." />
+<link rel="canonical" href="https://breakthroughmodeling.com/articles/ensemble-modeling-vs-business-oriented-data-modeling-two-paths-to-better-data-models.html" />
+<meta property="og:title" content="Ensemble Modeling vs. Business-Oriented Data Modeling: Two Paths to Better Data Models" />
+<meta property="og:description" content="Hultgren gives you a model that survives change. Sharp gives you a model the business actually understands. You don&#x27;t have to choose." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://breakthroughmodeling.com/articles/ensemble-modeling-vs-business-oriented-data-modeling-two-paths-to-better-data-models.html" />
+<meta name="twitter:card" content="summary" />
+<link rel="icon" href="../assets/favicon.svg" type="image/svg+xml" />
+<link rel="stylesheet" href="../assets/site.css" /></head>
+<body><header class="site"><div class="wrap"><a class="brand" href="../index.html">Breakthrough <span class="abbr">Modeling</span></a>
+<nav class="main">
+<span class="navgroup"><button class="navtop" type="button" aria-haspopup="true">Overview</button><span class="navmenu">
+<a href="../overview/index.html#impasse">The impasse</a>
+<a href="../overview/index.html#return">Why modeling came back</a>
+<a href="../overview/index.html#process">The process is stuck too</a>
+<a href="../overview/index.html#breakthrough">The breakthrough</a>
+<a href="../overview/index.html#old-wine">Old wine in new bottles?</a>
+<a href="../overview/index.html#what-it-is">What BTM actually is</a>
+<a href="../overview/index.html#model">The model behind it</a>
+<a href="../overview/index.html#more-than-structure">More than a data model</a>
+<a href="../overview/index.html#attitude">A new attitude</a>
+</span></span>
+<span class="navgroup"><button class="navtop" type="button" aria-haspopup="true">Methodology</button><span class="navmenu">
+<a href="../concepts/index.html">Concepts</a>
+<a href="../patterns/index.html">Patterns</a>
+<a href="../glossary/index.html">Glossary</a>
+</span></span>
+<span class="navgroup"><button class="navtop" type="button" aria-haspopup="true">Writing</button><span class="navmenu">
+<a href="../articles/index.html">Articles</a>
+<a href="../ideas/index.html">Inspiration</a>
+<a href="../news/index.html">News</a>
+<a href="../references.html">References</a>
+</span></span>
+<span class="navgroup"><button class="navtop" type="button" aria-haspopup="true">Practice</button><span class="navmenu">
+<a href="../skills/index.html">Skills</a>
+<a href="../decisions/index.html">Decisions</a>
+</span></span>
+<span class="navgroup"><button class="navtop" type="button" aria-haspopup="true">About</button><span class="navmenu">
+<a href="../about/index.html">About Jaco</a>
+<a href="../family/index.html">The family</a>
+<a href="../workshops/index.html">Services</a>
+<a href="../wake-up/index.html">The wake-up call</a>
+</span></span>
+<a class="cta" href="https://structurebeatsmagic.com">The family &rarr;</a></nav></div></header>
+<div class="wrap pagewrap">
+<main class="pagebody">
+<div class="eyebrow">Article</div>
+<h1>Ensemble Modeling vs. Business-Oriented Data Modeling: Two Paths to Better Data Models</h1>
+<div class="bw-meta">2025-09-19 · 5 min read</div>
+<p><em>Hans Hultgren&#x27;s Ensemble Modeling and Alec Sharp&#x27;s Business-Oriented Data Modeling get filed as rival methods. They&#x27;re not. One optimizes for what happens to the model after the workshop; the other optimizes for what happens inside it. Most teams need both.</em></p>
+<h2>Summary</h2>
+<blockquote><p>Ensemble Modeling (ELM) and Business-Oriented Data Modeling (BODM) are two influential approaches to building logical data models — and they get compared more often than they get combined.</p></blockquote>
+<blockquote><p></p></blockquote>
+<blockquote><p>Ensemble Modeling emphasizes agility, decomposition, and alignment with implementation patterns like Data Vault or Anchor Modeling. Alec Sharp&#x27;s Business-Oriented Data Modeling emphasizes clarity, communication, and business stakeholder engagement. Neither is wrong; they&#x27;re solving different halves of the same problem. This article walks through both, where they diverge, and why sequencing them beats picking one.</p></blockquote>
+<p>!Side-by-side comparison of Ensemble Modeling (agility, decomposition, patterns) and Business-Oriented Data Modeling (clarity, communication, alignment), meeting in the middle on &quot;Combining Strengths&quot;/ensemble-modeling-vs-business-oriented-data-modeling-two-paths-to-better-data-models/assets/01_hero/01_hero.png)</p>
+<h2>What Is Ensemble Modeling?</h2>
+<p>Ensemble Modeling — the <strong>Ensemble Logical Model (ELM)</strong> — is Hans Hultgren&#x27;s approach to logical modeling: <strong>business-driven and pattern-aware</strong> at the same time. It&#x27;s built to survive contact with real Data Vault or Anchor Modeling implementations, not just to look good on a whiteboard.</p>
+<p>The core mechanics:</p>
+<ul>
+<li><strong>Core Business Concepts (CBCs):</strong> the fundamental, stable entities — Customer, Product, Policy — that don&#x27;t change even when the business around them does.</li>
+<li><strong>Natural Business Relationships (NBRs):</strong> the relationships between those concepts, captured directly from how the business actually talks about them, not from a normalization exercise.</li>
+<li><strong>Unified Decomposition™:</strong> breaking concepts into modular components — concepts, relationships, events — so each piece can evolve independently without cracking the model around it.</li>
+<li><strong>Business Workshops:</strong> collaborative sessions where definitions, terms, and relationships get captured with the people who own the meaning.</li>
+<li><strong>Implementation Readiness:</strong> ELM logical models map cleanly to physical ensemble patterns — <strong>Data Vault</strong>, <strong>Anchor Modeling</strong>, <strong>Focal Point</strong> — so historization, flexibility, and scale are designed in, not bolted on later.</li>
+</ul>
+<p>The design target is <strong>change and longevity</strong>: a model built to absorb new requirements without losing semantic integrity every time the business shifts.</p>
+<h2>What Is Business-Oriented Data Modeling?</h2>
+<p>Business-Oriented Data Modeling (BODM), Alec Sharp&#x27;s method, starts from a different question. It treats the model as a <strong>business communication tool</strong> first, a technical artifact second.</p>
+<p>Its hallmarks:</p>
+<ul>
+<li><strong>Business-Friendly Diagrams:</strong> models a business stakeholder can actually read, without excessive normalization or technical shorthand getting in the way.</li>
+<li><strong>Shared Vocabulary:</strong> definitions and term clarity front and center, so the model reflects what the business means, not what a modeling tool defaults to.</li>
+<li><strong>Workshops &amp; Facilitation:</strong> the same collaborative instinct as ELM, but aimed at aligning IT and business around one shared picture rather than at decomposing structure.</li>
+<li><strong>Focus on Usability:</strong> the model exists to clarify requirements, communicate scope, and support decisions — it isn&#x27;t trying to prescribe a physical implementation.</li>
+</ul>
+<p>In short: BODM optimizes for <strong>alignment, understanding, and communication</strong> — the conversation the model enables, not the schema it eventually becomes.</p>
+<h2>Comparing the Two Approaches</h2>
+<p>Both approaches take business engagement seriously — that&#x27;s exactly why they get confused for competitors. But they&#x27;re solving for different outputs. ELM is built to answer &quot;how does this model survive the next five years of change and get implemented in Data Vault?&quot; BODM is built to answer &quot;does the business actually recognize itself in this model, right now?&quot; One is a <strong>destination</strong> concern, the other is a <strong>conversation</strong> concern — and a model that nails one and skips the other tends to fail quietly, months later, in the direction it didn&#x27;t cover.</p>
+<h2>When to Use Which?</h2>
+<ul>
+<li><strong>Use Ensemble Modeling</strong> when you need <strong>long-term resilience</strong> in the data architecture and you already know you&#x27;re implementing in Data Vault or Anchor Modeling patterns. It earns its keep in environments where requirements change often and the model has to keep up without a rebuild.</li>
+<li><strong>Use Business-Oriented Data Modeling</strong> when the priority is <strong>engagement, clarity, and stakeholder alignment</strong> — especially at the start of an initiative, or with a mixed audience that needs to see the big picture before anyone touches implementation.</li>
+</ul>
+<h2>Why Not Both?</h2>
+<p>These aren&#x27;t mutually exclusive — they&#x27;re sequential. Combining them gets you the best of both:</p>
+<p>1. Start with <strong>Business-Oriented Data Modeling</strong> to build a clear, shared understanding of business concepts, terms, and scope — the conversation that gets everyone looking at the same thing.</p>
+<p>2. Transition into <strong>Ensemble Modeling</strong> to decompose and structure those concepts into something that scales into a robust physical implementation.</p>
+<p>Layer Sharp&#x27;s communicative style on top of Hultgren&#x27;s pattern-driven methodology and you get models that <strong>resonate with business users</strong> and <strong>hold up once they&#x27;re actually built</strong>.</p>
+<p>This is <strong>Structure Beats Magic</strong> applied to modeling itself: the magic isn&#x27;t in picking the &quot;right&quot; methodology, it&#x27;s in the structure of the sequence — conversation first, decomposition second, each step handing the next one something solid to work with.</p>
+<h2>Closing Thoughts</h2>
+<p>Ensemble Modeling and Business-Oriented Data Modeling look like they&#x27;re aiming at different goals — technical adaptability versus business clarity. In practice, they&#x27;re two halves of the same job. Skip the BODM half and you get a technically elegant model nobody outside the modeling team can validate. Skip the ELM half and you get a model everyone understands and nobody can safely evolve.</p>
+<p>Data modeling was never just about diagrams and databases. It&#x27;s about people, concepts, and the discipline to keep both usable as things change. Whether you&#x27;re standing up the next data platform or running a business workshop, sequencing these two approaches — rather than choosing between them — is what gets you a model that&#x27;s both understood and durable.</p>
+<p>A future piece will look at how Steve Hoberman&#x27;s <em>Data Model Scorecard</em> can sit alongside both ELM and BODM as an objective way to check the work — a scorecard for whether the sequence above actually held.</p>
+<p style="margin-top:34px"><a href="index.html">&larr; All articles</a></p>
+</main></div>
+<footer><div class="wrap"><p><span class="badge">Test phase</span> &nbsp;
+Part of the <a href="https://structurebeatsmagic.com">Structure Beats Magic</a> family.</p></div></footer>
+<script type="module">
+  import { initDetail } from "../assets/detail.js";
+  initDetail();
+</script>
+</body></html>

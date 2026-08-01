@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="robots" content="noindex, nofollow" /><!-- TESTPHASE-NOINDEX -->
+<title>Patterns — Breakthrough Modeling</title>
+<meta name="description" content="Patterns on Breakthrough Modeling — filter, sort and browse." />
+<link rel="canonical" href="https://breakthroughmodeling.com/patterns/" />
+<meta property="og:title" content="Patterns — Breakthrough Modeling" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://breakthroughmodeling.com/patterns/" />
+<meta name="twitter:card" content="summary" />
+<link rel="icon" href="../assets/favicon.svg" type="image/svg+xml" />
+<link rel="stylesheet" href="../assets/site.css" /></head>
+<body><header class="site"><div class="wrap"><a class="brand" href="../index.html">Breakthrough <span class="abbr">Modeling</span></a>
+<nav class="main">
+<span class="navgroup"><button class="navtop" type="button" aria-haspopup="true">Overview</button><span class="navmenu">
+<a href="../overview/index.html#impasse">The impasse</a>
+<a href="../overview/index.html#return">Why modeling came back</a>
+<a href="../overview/index.html#process">The process is stuck too</a>
+<a href="../overview/index.html#breakthrough">The breakthrough</a>
+<a href="../overview/index.html#old-wine">Old wine in new bottles?</a>
+<a href="../overview/index.html#what-it-is">What BTM actually is</a>
+<a href="../overview/index.html#model">The model behind it</a>
+<a href="../overview/index.html#more-than-structure">More than a data model</a>
+<a href="../overview/index.html#attitude">A new attitude</a>
+</span></span>
+<span class="navgroup"><button class="navtop" type="button" aria-haspopup="true">Methodology</button><span class="navmenu">
+<a href="../concepts/index.html">Concepts</a>
+<a href="../patterns/index.html">Patterns</a>
+<a href="../glossary/index.html">Glossary</a>
+</span></span>
+<span class="navgroup"><button class="navtop" type="button" aria-haspopup="true">Writing</button><span class="navmenu">
+<a href="../articles/index.html">Articles</a>
+<a href="../ideas/index.html">Inspiration</a>
+<a href="../news/index.html">News</a>
+<a href="../references.html">References</a>
+</span></span>
+<span class="navgroup"><button class="navtop" type="button" aria-haspopup="true">Practice</button><span class="navmenu">
+<a href="../skills/index.html">Skills</a>
+<a href="../decisions/index.html">Decisions</a>
+</span></span>
+<span class="navgroup"><button class="navtop" type="button" aria-haspopup="true">About</button><span class="navmenu">
+<a href="../about/index.html">About Jaco</a>
+<a href="../family/index.html">The family</a>
+<a href="../workshops/index.html">Services</a>
+<a href="../wake-up/index.html">The wake-up call</a>
+</span></span>
+<a class="cta" href="https://structurebeatsmagic.com">The family &rarr;</a></nav></div></header>
+<div class="hero wrap listing-head">
+  <div class="listing-head-text">
+    <div class="eyebrow">Patterns &amp; anti-patterns</div>
+    <h1>The shapes that work, and the ones that keep failing</h1>
+    <p class="lede">A pattern is a shape you reach for instead of inventing one — a repeatable solution someone already paid to learn. An anti-pattern is the same thing in reverse: a shape that keeps being reached for and keeps failing. Naming both is what makes either usable, so they share a page. Filter by type to see them apart.</p>
+  </div>
+  
+</div>
+<section class="wrap">
+<div id="browse" data-page-type="patterns"></div>
+<div class="bw-fallback">
+  <p class="muted">All items:</p>
+  <ul class="artlist">
+    <li><a href="../concepts/coupled-by-default.html">Coupled by default</a> &mdash; <span class="muted">The anti-pattern: systems reach into each other&#x27;s internals because nothing stopped them — dependencies nobody</span></li>
+    <li><a href="../concepts/data-versioning.html">Data versioning</a> &mdash; <span class="muted">Track how the data changes over time — bi-temporal SCD2 with redelivery support — so you can ask what the data</span></li>
+    <li><a href="../concepts/decision-black-box.html">Decision black box</a> &mdash; <span class="muted">The anti-pattern: the outcome was recorded, the reasoning was not — so every decision has to be re-argued from</span></li>
+    <li><a href="../concepts/documentation-theatre.html">Documentation theatre</a> &mdash; <span class="muted">The anti-pattern: documentation produced to satisfy a process rather than a reader — complete, compliant, and </span></li>
+    <li><a href="../concepts/fragmented-schools-of-thought.html">Fragmented schools of thought</a> &mdash; <span class="muted">The anti-pattern: a discipline splits into rival interpretations of the same method, and practitioners spend t</span></li>
+    <li><a href="../concepts/gated-knowledge.html">Gated knowledge</a> &mdash; <span class="muted">The anti-pattern: understanding locked behind a person, a licence or a login — access controlled by whoever ho</span></li>
+    <li><a href="../concepts/local-tidiness.html">Local tidiness</a> &mdash; <span class="muted">The anti-pattern: every folder looks reasonable up close, and nobody can say what the system is. Order without</span></li>
+    <li><a href="../concepts/model-as-drawing.html">Model as drawing</a> &mdash; <span class="muted">The anti-pattern: treating the model as a picture to be drawn rather than knowledge to be captured — so it inf</span></li>
+    <li><a href="../concepts/social-cost-of-method.html">Social cost of method</a> &mdash; <span class="muted">The anti-pattern: a method&#x27;s vocabulary becomes insider language, splitting the team into those who can follow</span></li>
+  </ul>
+</div>
+<script type="module">
+  import { initBrowse } from "../assets/browse.js";
+  initBrowse("#browse", {
+    data: "../data/content_item.parquet",
+    base: "../",
+    assets: "../assets/",
+    pageType: "patterns",
+    itemTypes: ["pattern", "anti-pattern"],
+    defaults: {"view": "cards", "sort": "title"}
+  }).then(() => document.body.classList.add("bw-ready"));
+</script>
+</section>
+<footer><div class="wrap"><p><span class="badge">Test phase</span> &nbsp;
+Part of the <a href="https://structurebeatsmagic.com">Structure Beats Magic</a> family.</p></div></footer>
+</body></html>

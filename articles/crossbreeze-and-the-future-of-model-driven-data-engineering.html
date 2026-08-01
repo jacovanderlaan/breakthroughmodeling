@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="robots" content="noindex, nofollow" /><!-- TESTPHASE-NOINDEX -->
+<title>CrossBreeze and the Future of Model-Driven Data Engineering — Breakthrough Modeling</title>
+<meta name="description" content="Why tools, philosophy, and bright people matter for building tomorrow’s data platforms Press enter or click to view image in full size…" />
+<link rel="canonical" href="https://breakthroughmodeling.com/articles/crossbreeze-and-the-future-of-model-driven-data-engineering.html" />
+<meta property="og:title" content="CrossBreeze and the Future of Model-Driven Data Engineering" />
+<meta property="og:description" content="Why tools, philosophy, and bright people matter for building tomorrow’s data platforms Press enter or click to view image in full size…" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://breakthroughmodeling.com/articles/crossbreeze-and-the-future-of-model-driven-data-engineering.html" />
+<meta name="twitter:card" content="summary" />
+<link rel="icon" href="../assets/favicon.svg" type="image/svg+xml" />
+<link rel="stylesheet" href="../assets/site.css" /></head>
+<body><header class="site"><div class="wrap"><a class="brand" href="../index.html">Breakthrough <span class="abbr">Modeling</span></a>
+<nav class="main">
+<span class="navgroup"><button class="navtop" type="button" aria-haspopup="true">Overview</button><span class="navmenu">
+<a href="../overview/index.html#impasse">The impasse</a>
+<a href="../overview/index.html#return">Why modeling came back</a>
+<a href="../overview/index.html#process">The process is stuck too</a>
+<a href="../overview/index.html#breakthrough">The breakthrough</a>
+<a href="../overview/index.html#old-wine">Old wine in new bottles?</a>
+<a href="../overview/index.html#what-it-is">What BTM actually is</a>
+<a href="../overview/index.html#model">The model behind it</a>
+<a href="../overview/index.html#more-than-structure">More than a data model</a>
+<a href="../overview/index.html#attitude">A new attitude</a>
+</span></span>
+<span class="navgroup"><button class="navtop" type="button" aria-haspopup="true">Methodology</button><span class="navmenu">
+<a href="../concepts/index.html">Concepts</a>
+<a href="../patterns/index.html">Patterns</a>
+<a href="../glossary/index.html">Glossary</a>
+</span></span>
+<span class="navgroup"><button class="navtop" type="button" aria-haspopup="true">Writing</button><span class="navmenu">
+<a href="../articles/index.html">Articles</a>
+<a href="../ideas/index.html">Inspiration</a>
+<a href="../news/index.html">News</a>
+<a href="../references.html">References</a>
+</span></span>
+<span class="navgroup"><button class="navtop" type="button" aria-haspopup="true">Practice</button><span class="navmenu">
+<a href="../skills/index.html">Skills</a>
+<a href="../decisions/index.html">Decisions</a>
+</span></span>
+<span class="navgroup"><button class="navtop" type="button" aria-haspopup="true">About</button><span class="navmenu">
+<a href="../about/index.html">About Jaco</a>
+<a href="../family/index.html">The family</a>
+<a href="../workshops/index.html">Services</a>
+<a href="../wake-up/index.html">The wake-up call</a>
+</span></span>
+<a class="cta" href="https://structurebeatsmagic.com">The family &rarr;</a></nav></div></header>
+<div class="wrap pagewrap">
+<main class="pagebody">
+<div class="eyebrow">Article</div>
+<h1>CrossBreeze and the Future of Model-Driven Data Engineering</h1>
+<div class="bw-meta">2025-09-19 · 3 min read</div>
+<p><em>Why tools, philosophy, and bright people matter for building tomorrow’s data platforms</em></p>
+<h2>Summary</h2>
+<blockquote><p>At <strong>de Volksbank/ASN</strong>, we proved that Model Driven Data Engineering (MDDE) works in practice.</p></blockquote>
+<blockquote><p></p></blockquote>
+<blockquote><p>A key enabler was <strong>CrossTest</strong>, CrossBreeze’s automated testing framework, together with the open-source <strong>PowerDecomposer</strong>, which allowed us to extend PowerDesigner into a metadata-driven workflow.</p></blockquote>
+<blockquote><p></p></blockquote>
+<blockquote><p>The lessons from this project — and from other customers — directly inspired the development of <strong>CrossModel</strong> and <strong>CrossGenerate</strong>, modern tools built to replace legacy modeling environments and automate code generation.</p></blockquote>
+<blockquote><p></p></blockquote>
+<blockquote><p>This article highlights why CrossBreeze’s philosophy matters, and how it fits into the future of data engineering.</p></blockquote>
+<p>Press enter or click to view image in full size</p>
+<p>![](data/products/mdde/output/articles/published/2025/09/2025-W38%20(15%20Sep%20-%2021%20Sep)/crossbreeze-and-the-future-of-model-driven-data-engineering/assets/01_hero/01_hero.png)</p>
+<h2>CrossBreeze’s Philosophy</h2>
+<p>CrossBreeze is built on a simple but powerful idea: <strong>data engineering should be model-driven, not code-driven</strong>.</p>
+<p>Their philosophy centers on:</p>
+<ul>
+<li><strong>Shift from programming to modeling</strong> → Put the business and metadata at the core.</li>
+<li><strong>Automation as default</strong> → If it can be generated, don’t hand-code it.</li>
+<li><strong>Testing as a first-class citizen</strong> → Quality is not optional; it must be built in.</li>
+<li><strong>Bridge business and IT</strong> → Models that capture business semantics are the real driver of sustainable platforms.</li>
+</ul>
+<h2>Tools in Context</h2>
+<ul>
+<li><strong>CrossTest</strong>: The first product we used at Volksbank. It embedded automated regression and functional testing directly into the data warehouse pipelines, making every release safer and more reliable.</li>
+<li><strong>PowerDecomposer</strong>: An open-source solution that decomposed PowerDesigner models into metadata structures, enabling automation and governance. It was essential for filling the gaps left by PowerDesigner. 👉 <a href="https://powerdecomposer.crossbreeze.nl/">PowerDecomposer</a></li>
+<li><strong>CrossModel</strong>: Developed later, based on insights from Volksbank and other customers. It was built from the ground up as a <strong>modern replacement for PowerDesigner, Erwin, and other legacy data modeling tools</strong>.</li>
+<li><strong>CrossGenerate</strong>: Created alongside CrossModel, this tool automates <strong>code generation directly from metadata models</strong>, bridging the gap between design and implementation.</li>
+</ul>
+<p>Together, these tools form a <strong>closed feedback loop</strong>:</p>
+<p>➡️ Model → ➡️ Generate → ➡️ Test → ➡️ Deploy → ➡️ Govern</p>
+<h2>Insights from Their Blog</h2>
+<p>CrossBreeze’s blog expands on these ideas with practical insights:</p>
+<ul>
+<li><strong>Automation Made Practical</strong>: Articles on how model-driven frameworks reduce manual coding errors and speed up delivery.</li>
+<li><strong>Business/IT Alignment</strong>: Stories about bridging the gap between data modelers and developers, ensuring models remain true to business rules.</li>
+<li><strong>Testing for Confidence</strong>: A recurring theme is the importance of automated tests for trust in data, especially in regulated industries.</li>
+<li><strong>Future of MDDE</strong>: Reflections on how CrossModel, CrossGenerate, and CrossTest can shape the next wave of metadata-driven platforms.</li>
+</ul>
+<p>👉 Explore more here: <a href="https://crossbreeze.nl/blog/">CrossBreeze Blog</a></p>
+<h2>Why It Matters</h2>
+<p>In my view, CrossBreeze embodies the shift our industry needs:</p>
+<ul>
+<li>Away from <strong>heroic coding</strong> toward <strong>governed modeling</strong>.</li>
+<li>Away from <strong>ad hoc testing</strong> toward <strong>automated quality</strong>.</li>
+<li>Away from <strong>technology churn</strong> toward <strong>metadata as the foundation</strong>.</li>
+</ul>
+<p>They don’t just provide tools — they provide a <strong>mindset</strong>. And in large-scale, regulated environments like ASN (De Volksbank), that mindset is the difference between delay and delivery.</p>
+<h2>Closing Thoughts</h2>
+<p>The future of data engineering is <strong>metadata-driven, model-first, and automated</strong>. CrossBreeze shows how to make that vision concrete with tools, philosophy, and a relentless focus on quality.</p>
+<p>For me, their biggest contribution is not just technology, but the reminder that <strong>bright people, working with the right principles, can change how data engineering is done</strong>.\</p>
+<p style="margin-top:34px"><a href="index.html">&larr; All articles</a></p>
+</main></div>
+<footer><div class="wrap"><p><span class="badge">Test phase</span> &nbsp;
+Part of the <a href="https://structurebeatsmagic.com">Structure Beats Magic</a> family.</p></div></footer>
+<script type="module">
+  import { initDetail } from "../assets/detail.js";
+  initDetail();
+</script>
+</body></html>

@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="robots" content="noindex, nofollow" /><!-- TESTPHASE-NOINDEX -->
+<title>From Data Vault to Bi-Temporal 3NF: A Simpler Path to Governed Data Platforms — Breakthrough Modeling</title>
+<meta name="description" content="Keep the discipline banks need, drop the vocabulary they don&#x27;t" />
+<link rel="canonical" href="https://breakthroughmodeling.com/articles/from-data-vault-to-bi-temporal-3nf-a-simpler-path-to-governed-data-platforms.html" />
+<meta property="og:title" content="From Data Vault to Bi-Temporal 3NF: A Simpler Path to Governed Data Platforms" />
+<meta property="og:description" content="Keep the discipline banks need, drop the vocabulary they don&#x27;t" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://breakthroughmodeling.com/articles/from-data-vault-to-bi-temporal-3nf-a-simpler-path-to-governed-data-platforms.html" />
+<meta name="twitter:card" content="summary" />
+<link rel="icon" href="../assets/favicon.svg" type="image/svg+xml" />
+<link rel="stylesheet" href="../assets/site.css" /></head>
+<body><header class="site"><div class="wrap"><a class="brand" href="../index.html">Breakthrough <span class="abbr">Modeling</span></a>
+<nav class="main">
+<span class="navgroup"><button class="navtop" type="button" aria-haspopup="true">Overview</button><span class="navmenu">
+<a href="../overview/index.html#impasse">The impasse</a>
+<a href="../overview/index.html#return">Why modeling came back</a>
+<a href="../overview/index.html#process">The process is stuck too</a>
+<a href="../overview/index.html#breakthrough">The breakthrough</a>
+<a href="../overview/index.html#old-wine">Old wine in new bottles?</a>
+<a href="../overview/index.html#what-it-is">What BTM actually is</a>
+<a href="../overview/index.html#model">The model behind it</a>
+<a href="../overview/index.html#more-than-structure">More than a data model</a>
+<a href="../overview/index.html#attitude">A new attitude</a>
+</span></span>
+<span class="navgroup"><button class="navtop" type="button" aria-haspopup="true">Methodology</button><span class="navmenu">
+<a href="../concepts/index.html">Concepts</a>
+<a href="../patterns/index.html">Patterns</a>
+<a href="../glossary/index.html">Glossary</a>
+</span></span>
+<span class="navgroup"><button class="navtop" type="button" aria-haspopup="true">Writing</button><span class="navmenu">
+<a href="../articles/index.html">Articles</a>
+<a href="../ideas/index.html">Inspiration</a>
+<a href="../news/index.html">News</a>
+<a href="../references.html">References</a>
+</span></span>
+<span class="navgroup"><button class="navtop" type="button" aria-haspopup="true">Practice</button><span class="navmenu">
+<a href="../skills/index.html">Skills</a>
+<a href="../decisions/index.html">Decisions</a>
+</span></span>
+<span class="navgroup"><button class="navtop" type="button" aria-haspopup="true">About</button><span class="navmenu">
+<a href="../about/index.html">About Jaco</a>
+<a href="../family/index.html">The family</a>
+<a href="../workshops/index.html">Services</a>
+<a href="../wake-up/index.html">The wake-up call</a>
+</span></span>
+<a class="cta" href="https://structurebeatsmagic.com">The family &rarr;</a></nav></div></header>
+<div class="wrap pagewrap">
+<main class="pagebody">
+<div class="eyebrow">Article</div>
+<h1>From Data Vault to Bi-Temporal 3NF: A Simpler Path to Governed Data Platforms</h1>
+<div class="bw-meta">2025-09-23 · 6 min read</div>
+<p><em>Why banks and other complex organizations should preserve Inmon-style modeling while adopting the best concepts from Data Vault.</em></p>
+<h2>Introduction</h2>
+<blockquote><p>Data Vault has left an undeniable mark on modern data architecture. Its ideas around auditability, insert-only loading, and query assistance have reshaped how many practitioners think about scalable data warehouses.</p></blockquote>
+<blockquote><p></p></blockquote>
+<blockquote><p>Yet, as I have argued in earlier articles, its implementations can easily become overly complicated — introducing new terminology, conflicting schools of thought, and steep learning curves that make delivery harder rather than faster.</p></blockquote>
+<blockquote><p></p></blockquote>
+<blockquote><p>So where do we go from here?</p></blockquote>
+<p>Here is the alternative I keep landing on with banks and other regulated enterprises: keep the <strong>strengths of Data Vault&#x27;s concepts</strong>, drop the vocabulary, and anchor everything in the <strong>clarity of 3NF modeling and bi-temporal SCD2</strong>. You get the governance and scalability a bank actually needs, without asking every modeler, auditor, and business analyst to first learn a new dialect of hubs, links, and satellites.</p>
+<p>This is not a rejection of Data Vault — it is [[concept-structure-beats-magic|Structure Beats Magic]] applied to modeling itself: the governance value was never in the terminology, it was in the discipline the terminology enforced. Keep the discipline. Lose the tax.</p>
+<p>!From Data Vault to Bi-Temporal 3NF — a balance scale weighing 3NF plus SCD2 against Data Vault concepts (PIT, bridges, insert-only), both sides in equilibrium/from-data-vault-to-bi-temporal-3nf-a-simpler-path-to-governed-data-platforms/assets/01_hero/01_hero.png)</p>
+<h2>Keeping the Core: 3NF as the Integration Layer</h2>
+<p>At the heart of this approach lies the <strong>logical data model (LDM)</strong>. The LDM defines <strong>entity types</strong> — core entities, characteristic entities, associative entities, and reference entities. In a 3NF integration layer, these logical distinctions map directly to physical tables:</p>
+<ul>
+<li><strong>Core entity → Core table</strong> (similar to a Hub, but without introducing new language)</li>
+<li><strong>Characteristic entity → Attribute table</strong> (like Satellites, but modeled with clarity)</li>
+<li><strong>Associative entity → Relationship table</strong> (similar to Links, representing many-to-many or complex relations)</li>
+<li><strong>Reference entity → Lookup table</strong></li>
+</ul>
+<p>Unlike Data Vault, we <strong>do not create new constructs or invent a separate terminology</strong>. We stay in the familiar Inmon 3NF world while ensuring inheritance, historization, and auditability are handled properly. That familiarity is not a nostalgia play — it is what makes the model [[concept-business-friendly-data-modeling|business-friendly]]: a business SME can recognize their own entities in the diagram without a Data Vault glossary open in another tab. The layer is [[concept-business-shaped-integration-layer|shaped by the business domains]], not by source-system topology and not by vault vocabulary.</p>
+<h2>Handling Supertypes and Subtypes the Classic Way</h2>
+<p>One of the thorniest challenges in Data Vault implementations is the <strong>inheritance problem</strong> — when to model a Hub, when something is a core concept, and how to deal with subtype hierarchies (e.g. parties, agreements, collateral).</p>
+<p>In 3NF, the solution is simple and elegant:</p>
+<ul>
+<li><strong>Physical table at supertype level</strong>: one table stores all subtype columns as nullable fields.</li>
+<li><strong>Views at subtype level</strong>: business users see clean subtype-specific views, derived from the supertype table.</li>
+</ul>
+<p>This avoids the confusion of distributing subtype attributes across multiple satellites or introducing &quot;inheritance hubs,&quot; which mixes modeling styles and creates unnecessary complexity. It is a small decision with an outsized payoff: one supertype table plus views is something a new joiner can explain on a whiteboard in five minutes. An inheritance-hub pattern usually needs the original architect in the room.</p>
+<h2>Bi-Temporal SCD2 as the Foundation</h2>
+<p>The integration layer must handle <strong>change over time</strong> — and this is where <strong>[[concept-dual-scd2|dual (bi-temporal) SCD2]]</strong> comes in. Each core and attribute table tracks:</p>
+<ul>
+<li><strong>Valid-from / valid-to</strong> (business effective dates)</li>
+<li><strong>Load timestamp</strong> (system insertion moment)</li>
+</ul>
+<p>This dual tracking lets you reconstruct both business history and system lineage at any point in time. It is <strong>simple, governed, and powerful</strong> — and it is the actual audit backbone regulators care about, not the hub/link/satellite naming above it.</p>
+<h2>Borrowing the Best from Data Vault</h2>
+<p>Even though we simplify, we do not throw out Data Vault entirely. We integrate its most valuable ideas — the ones that solve real query and audit problems, not the ones that just relabel a table:</p>
+<ul>
+<li><strong>[[concept-pit-helper-tables|PIT (Point-in-Time) tables]]</strong>: query assistance that simplifies temporal joins and delivers snapshot views without scanning validity ranges on every query. Essential for monthly reporting or regulatory views.</li>
+<li><strong>Bridge tables</strong>: simplify multi-hop joins across complex associative entities, improving performance for consumption layers.</li>
+<li><strong>Insert-only loading</strong>: preserves the audit trail and ensures history can always be replayed.</li>
+</ul>
+<p>In short, <strong>we keep what works and leave behind the dogma</strong>.</p>
+<h2>Why This Matters</h2>
+<p>For highly governed environments such as banks, the trade-off is clear:</p>
+<ul>
+<li>Data Vault implementations often descend into complexity accessible only to a handful of certified experts — the exact [[concept-ivory-tower-architecture|ivory-tower]] failure mode where the model is elegant on paper and disconnected from who actually has to run and audit it.</li>
+<li>3NF with bi-temporal SCD2, supported by selective Data Vault concepts, gives you <strong>transparency, clarity, and maintainability</strong> without the certification tax.</li>
+<li>Business users, modelers, and engineers work from a <strong>shared logical model</strong> without navigating an artificial new language of hubs, links, and satellites.</li>
+</ul>
+<p>I am not the tool. I do not sell hubs, links, or satellites — or their replacements. I extend the modeling discipline you already have (Inmon 3NF, SCD2) with the two or three Data Vault ideas that earn their keep, using the platforms you already run.</p>
+<h2>Conclusion</h2>
+<p>Data Vault taught us a great deal about auditability, parallelization, and agility. Its greatest gift, though, might be the <strong>concepts we can reuse in simpler, more transparent architectures</strong> — not the vocabulary that came bundled with them.</p>
+<p>Combine <strong>classic 3NF integration modeling</strong> with <strong>bi-temporal SCD2</strong>, borrow <strong>helper concepts like PIT and bridges</strong>, and you get data platforms that are:</p>
+<ul>
+<li>Governed and auditable</li>
+<li>Scalable in the cloud</li>
+<li>Understandable to both business and IT</li>
+</ul>
+<p>This hybrid approach is the discipline of Inmon, the clarity of logical modeling, and the practical patterns of Data Vault — without the burden of unnecessary complexity. Structure beat magic long before &quot;magic&quot; meant AI; Data Vault&#x27;s magic was always its structure, and that structure survives the terminology it arrived in.</p>
+<p>✍️ <em>This article is Part 5 of the</em> <strong><em>Data Vault Reconsidered</em></strong> <em>series.</em></p>
+<ul>
+<li><strong>Part 1:</strong> Still Relevant in the Cloud Era?</li>
+<li><strong>Part 2:</strong> The Complexity of a Data Vault Implementation</li>
+<li><strong>Part 3:</strong> The Data Vault Practitioner&#x27;s Glossary</li>
+<li><strong>Part 4:</strong> Dan Linstedt and the Origins of Data Vault</li>
+<li><strong>Part 6 (next):</strong> <em>From Complexity to Clarity — Migrating from DV to Simplified Bi-Temporal SCD2</em></li>
+<li><strong>Part 7:</strong> <em>Migrating from Data Vault to Bi-Temporal 3NF: A Controlled Metadata-Driven Approach</em></li>
+</ul>
+<p><strong>Disclaimer</strong></p>
+<p><em>The approaches, techniques, and examples described in this article are based on practical experience and research but should be viewed as</em> <strong><em>guidelines rather than strict prescriptions</em></strong>_. Every organization has unique data landscapes, regulatory obligations, and architectural constraints.</p>
+<p>Migrating from Data Vault to a bi-temporal SCD2 structure is a_ <strong><em>complex process</em></strong> _that requires careful planning, validation, and governance. The methods outlined here — such as SQL parsing, AI-assisted query rewriting, and controlled re-historization — must be adapted to your specific environment and tested thoroughly before use in production.</p>
+<p>This article is not a substitute for professional consulting or architectural review._</p>
+<p style="margin-top:34px"><a href="index.html">&larr; All articles</a></p>
+</main></div>
+<footer><div class="wrap"><p><span class="badge">Test phase</span> &nbsp;
+Part of the <a href="https://structurebeatsmagic.com">Structure Beats Magic</a> family.</p></div></footer>
+<script type="module">
+  import { initDetail } from "../assets/detail.js";
+  initDetail();
+</script>
+</body></html>

@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="robots" content="noindex, nofollow" /><!-- TESTPHASE-NOINDEX -->
+<title>From Whiteboards to Working Models: How We Built a Model-Driven Data Warehouse at de Volksbank with CrossBreeze — Breakthrough Modeling</title>
+<meta name="description" content="Replacing a Risk &amp; Finance DWH under ECB/DNB pressure — and why the model, not the magic, made it repeatable" />
+<link rel="canonical" href="https://breakthroughmodeling.com/articles/from-whiteboards-to-working-models-how-we-built-a-model-driven-data-warehouse-at-de-volksbank-with.html" />
+<meta property="og:title" content="From Whiteboards to Working Models: How We Built a Model-Driven Data Warehouse at de Volksbank with CrossBreeze" />
+<meta property="og:description" content="Replacing a Risk &amp; Finance DWH under ECB/DNB pressure — and why the model, not the magic, made it repeatable" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://breakthroughmodeling.com/articles/from-whiteboards-to-working-models-how-we-built-a-model-driven-data-warehouse-at-de-volksbank-with.html" />
+<meta name="twitter:card" content="summary" />
+<link rel="icon" href="../assets/favicon.svg" type="image/svg+xml" />
+<link rel="stylesheet" href="../assets/site.css" /></head>
+<body><header class="site"><div class="wrap"><a class="brand" href="../index.html">Breakthrough <span class="abbr">Modeling</span></a>
+<nav class="main">
+<span class="navgroup"><button class="navtop" type="button" aria-haspopup="true">Overview</button><span class="navmenu">
+<a href="../overview/index.html#impasse">The impasse</a>
+<a href="../overview/index.html#return">Why modeling came back</a>
+<a href="../overview/index.html#process">The process is stuck too</a>
+<a href="../overview/index.html#breakthrough">The breakthrough</a>
+<a href="../overview/index.html#old-wine">Old wine in new bottles?</a>
+<a href="../overview/index.html#what-it-is">What BTM actually is</a>
+<a href="../overview/index.html#model">The model behind it</a>
+<a href="../overview/index.html#more-than-structure">More than a data model</a>
+<a href="../overview/index.html#attitude">A new attitude</a>
+</span></span>
+<span class="navgroup"><button class="navtop" type="button" aria-haspopup="true">Methodology</button><span class="navmenu">
+<a href="../concepts/index.html">Concepts</a>
+<a href="../patterns/index.html">Patterns</a>
+<a href="../glossary/index.html">Glossary</a>
+</span></span>
+<span class="navgroup"><button class="navtop" type="button" aria-haspopup="true">Writing</button><span class="navmenu">
+<a href="../articles/index.html">Articles</a>
+<a href="../ideas/index.html">Inspiration</a>
+<a href="../news/index.html">News</a>
+<a href="../references.html">References</a>
+</span></span>
+<span class="navgroup"><button class="navtop" type="button" aria-haspopup="true">Practice</button><span class="navmenu">
+<a href="../skills/index.html">Skills</a>
+<a href="../decisions/index.html">Decisions</a>
+</span></span>
+<span class="navgroup"><button class="navtop" type="button" aria-haspopup="true">About</button><span class="navmenu">
+<a href="../about/index.html">About Jaco</a>
+<a href="../family/index.html">The family</a>
+<a href="../workshops/index.html">Services</a>
+<a href="../wake-up/index.html">The wake-up call</a>
+</span></span>
+<a class="cta" href="https://structurebeatsmagic.com">The family &rarr;</a></nav></div></header>
+<div class="wrap pagewrap">
+<main class="pagebody">
+<div class="eyebrow">Article</div>
+<h1>From Whiteboards to Working Models: How We Built a Model-Driven Data Warehouse at de Volksbank with CrossBreeze</h1>
+<div class="bw-meta">2025-09-19 · 5 min read</div>
+<p><em>Why teamwork and model-driven engineering delivered a future-proof data warehouse under regulatory pressure</em></p>
+<h2>Summary</h2>
+<blockquote><p>At <strong>de Volksbank</strong> (parent of ASN Bank and RegioBank), we replaced the <strong>Risk &amp; Finance Data Warehouse</strong> under strict ECB/DNB requirements. Working with <strong>CrossBreeze</strong>, we applied <strong>Model Driven Data Engineering (MDDE)</strong> with <strong>PowerDesigner data models</strong> as the single source of truth.</p></blockquote>
+<blockquote><p></p></blockquote>
+<blockquote><p>Alongside PowerDesigner, we relied on CrossBreeze&#x27;s <strong>CrossTest</strong> for automated validation and the open-source <strong>PowerDecomposer</strong> to unlock metadata-driven automation.</p></blockquote>
+<blockquote><p></p></blockquote>
+<blockquote><p>The lessons we learned there also shaped <strong>CrossModel</strong> and <strong>CrossGenerate</strong>, CrossBreeze&#x27;s next-generation tools.</p></blockquote>
+<blockquote><p></p></blockquote>
+<blockquote><p>This case study is about what we built, why the team made it work, and why <strong>Structure Beats Magic</strong> isn&#x27;t a slogan when a regulator is checking your lineage.</p></blockquote>
+<p>!Logos of de Volksbank, RegioBank, ASN Bank and CrossBreeze above icons of a modular brick and geometric shapes on a floor plan, representing the modular, model-driven build/from-whiteboards-to-working-models-how-we-built-a-model-driven-data-warehouse-at-de-volksbank-with/assets/01_hero/01_hero.png)</p>
+<h2>The Challenge</h2>
+<p>Replacing a Risk &amp; Finance DWH is not business as usual. The demands were steep:</p>
+<ul>
+<li>Meet <strong>regulatory deadlines</strong> from ECB/DNB.</li>
+<li>Provide <strong>lineage and governance</strong> an auditor could trust without a walkthrough.</li>
+<li>Ensure <strong>quality and consistency</strong> across multiple domains feeding the same reports.</li>
+<li>Deliver a platform that was <strong>faster and more maintainable</strong> than the ETL-heavy system it replaced.</li>
+</ul>
+<p>Hand-coded ETL, scattered documentation, and manual testing don&#x27;t scale under that combination. Every one of those four demands is really the same demand: prove the system does what you say it does, on command, without a rebuild. That&#x27;s a structure problem, not a talent problem — no amount of individual brilliance in hand-written SQL produces lineage an auditor can trust. You need the model to carry the proof.</p>
+<h2>The Model-Driven Approach</h2>
+<p>Instead of coding everything by hand, we adopted <strong>Model Driven Data Engineering (MDDE)</strong>:</p>
+<ul>
+<li><strong>PowerDesigner models</strong> became the single source of truth for structure, mappings, and business rules.</li>
+<li><strong>A metadata repository</strong> captured everything — no hidden logic living only in someone&#x27;s head or a Confluence page.</li>
+<li><strong>Generators and automation frameworks</strong> turned models into SQL code and automated tests.</li>
+<li><strong>CI/CD pipelines</strong> made deployments reproducible and safe.</li>
+</ul>
+<p>The idea was simple: <strong>if it&#x27;s in the model, it&#x27;s in the code.</strong> That single rule is what makes MDDE a tool-extender rather than a rewrite of the stack — PowerDesigner, SQL, and CI/CD were all tools the team already knew. What changed was the discipline of routing every change through the model first, so the model stayed the one place a reviewer needed to look.</p>
+<h2>The Role of CrossBreeze</h2>
+<p>We <strong>heavily used CrossTest</strong>, CrossBreeze&#x27;s testing framework. It let us embed automated regression and functional tests directly into the data warehouse pipelines, so every release shipped with evidence, not just confidence.</p>
+<p>We also relied on <strong>PowerDecomposer</strong>, an open-source tool CrossBreeze built: 👉 <a href="https://powerdecomposer.crossbreeze.nl/">PowerDecomposer</a>. It decomposed PowerDesigner models into usable metadata structures, connecting modeling to automation and governance. Without it, PowerDesigner&#x27;s models would have stayed diagrams — pretty, but inert. PowerDecomposer is what turned them into metadata-as-code: structure a generator could act on, not just a picture a human could read.</p>
+<p>At the same time, CrossBreeze was already building <strong>CrossModel</strong> and <strong>CrossGenerate</strong> — tools born directly from the gaps we hit on this project.</p>
+<ul>
+<li><strong>PowerDesigner</strong>, while solid, had limits: SAP had stopped prioritizing it, development had slowed, and metadata management and automation had visible gaps.</li>
+<li>Based on this project (and others), CrossBreeze started building <strong>CrossModel</strong> as a modern, metadata-native replacement for PowerDesigner, ER/Studio, and similar legacy modeling tools.</li>
+<li>Alongside it, <strong>CrossGenerate</strong> took shape: generating code directly from metadata models instead of through a decomposition step bolted on afterward.</li>
+</ul>
+<p>The Volksbank project wasn&#x27;t just a delivery — it was a feedback loop into better tools. That&#x27;s what a healthy tool-extender relationship with a vendor looks like: you don&#x27;t wait for the framework to be perfect, you use what exists, and the friction you hit becomes the vendor&#x27;s next roadmap item.</p>
+<h2>Results That Spoke for Themselves</h2>
+<p>The combination of <strong>strong people, solid tools, and disciplined modeling</strong> delivered results that didn&#x27;t need spin:</p>
+<ul>
+<li><strong>3x faster development speed</strong> compared to traditional coding.</li>
+<li><strong>Onboarding time</strong> dropped from 3 months to 3 weeks — because new team members could read the model, not reverse-engineer someone else&#x27;s SQL.</li>
+<li><strong>10,000+ automated tests and controls</strong> embedded into the platform, not bolted on at the end.</li>
+<li><strong>Production go-live in 2.5 years</strong>, meeting every regulatory deadline.</li>
+</ul>
+<p>The number that mattered most internally wasn&#x27;t any of those — it was <strong>confidence</strong>: in the data, in the lineage, and in the reproducibility of every release. That&#x27;s the actual product of structure. Speed and onboarding time are downstream effects.</p>
+<h2>Why the Team Was the Key</h2>
+<p>The technology was necessary, but it wasn&#x27;t sufficient. The real success came from the <strong>team dynamic</strong>:</p>
+<ul>
+<li>Volksbank colleagues who believed in modeling-first, even when it meant slower to a first-and-wrong answer.</li>
+<li>CrossBreeze experts who brought deep product knowledge and fixed gaps in real time.</li>
+<li>A shared vision, stated plainly: <strong>move from whiteboards to working models.</strong></li>
+</ul>
+<p>Complex data platforms don&#x27;t get solved by one brilliant engineer with more coffee. It took a team of committed people rowing in the same direction, with a model as the shared reference point — so disagreements were about the model, not about whose SQL was right.</p>
+<h2>Lessons Learned</h2>
+<p>Three things held up on reflection, months later:</p>
+<p>1. <strong>Model-driven engineering works</strong> — when models drive structure, mappings, and rules, both quality and speed improve, and they improve together instead of trading off.</p>
+<p>2. <strong>Automation pays off</strong> — code generation and testing aren&#x27;t luxuries you add once budget allows; skip them and you&#x27;re paying the ECB/DNB tax in manual rework instead.</p>
+<p>3. <strong>Teamwork is the multiplier</strong> — bright people, aligned around the same model, are the difference between a project that survives its own regulatory deadline and one that doesn&#x27;t.</p>
+<p>None of this was magic. It was structure — a model everyone could read, tools that respected it, and a team that trusted it enough to build on top of it instead of around it.</p>
+<p style="margin-top:34px"><a href="index.html">&larr; All articles</a></p>
+</main></div>
+<footer><div class="wrap"><p><span class="badge">Test phase</span> &nbsp;
+Part of the <a href="https://structurebeatsmagic.com">Structure Beats Magic</a> family.</p></div></footer>
+<script type="module">
+  import { initDetail } from "../assets/detail.js";
+  initDetail();
+</script>
+</body></html>

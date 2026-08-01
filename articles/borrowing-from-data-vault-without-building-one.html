@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="robots" content="noindex, nofollow" /><!-- TESTPHASE-NOINDEX -->
+<title>Borrowing from Data Vault Without Building One — Breakthrough Modeling</title>
+<meta name="description" content="Hubs, links, and satellites are good ideas. A full Data Vault implementation is a commitment. Here&#x27;s how to take the ideas without the commitment." />
+<link rel="canonical" href="https://breakthroughmodeling.com/articles/borrowing-from-data-vault-without-building-one.html" />
+<meta property="og:title" content="Borrowing from Data Vault Without Building One" />
+<meta property="og:description" content="Hubs, links, and satellites are good ideas. A full Data Vault implementation is a commitment. Here&#x27;s how to take the ideas without the commitment." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://breakthroughmodeling.com/articles/borrowing-from-data-vault-without-building-one.html" />
+<meta name="twitter:card" content="summary" />
+<link rel="icon" href="../assets/favicon.svg" type="image/svg+xml" />
+<link rel="stylesheet" href="../assets/site.css" /></head>
+<body><header class="site"><div class="wrap"><a class="brand" href="../index.html">Breakthrough <span class="abbr">Modeling</span></a>
+<nav class="main">
+<span class="navgroup"><button class="navtop" type="button" aria-haspopup="true">Overview</button><span class="navmenu">
+<a href="../overview/index.html#impasse">The impasse</a>
+<a href="../overview/index.html#return">Why modeling came back</a>
+<a href="../overview/index.html#process">The process is stuck too</a>
+<a href="../overview/index.html#breakthrough">The breakthrough</a>
+<a href="../overview/index.html#old-wine">Old wine in new bottles?</a>
+<a href="../overview/index.html#what-it-is">What BTM actually is</a>
+<a href="../overview/index.html#model">The model behind it</a>
+<a href="../overview/index.html#more-than-structure">More than a data model</a>
+<a href="../overview/index.html#attitude">A new attitude</a>
+</span></span>
+<span class="navgroup"><button class="navtop" type="button" aria-haspopup="true">Methodology</button><span class="navmenu">
+<a href="../concepts/index.html">Concepts</a>
+<a href="../patterns/index.html">Patterns</a>
+<a href="../glossary/index.html">Glossary</a>
+</span></span>
+<span class="navgroup"><button class="navtop" type="button" aria-haspopup="true">Writing</button><span class="navmenu">
+<a href="../articles/index.html">Articles</a>
+<a href="../ideas/index.html">Inspiration</a>
+<a href="../news/index.html">News</a>
+<a href="../references.html">References</a>
+</span></span>
+<span class="navgroup"><button class="navtop" type="button" aria-haspopup="true">Practice</button><span class="navmenu">
+<a href="../skills/index.html">Skills</a>
+<a href="../decisions/index.html">Decisions</a>
+</span></span>
+<span class="navgroup"><button class="navtop" type="button" aria-haspopup="true">About</button><span class="navmenu">
+<a href="../about/index.html">About Jaco</a>
+<a href="../family/index.html">The family</a>
+<a href="../workshops/index.html">Services</a>
+<a href="../wake-up/index.html">The wake-up call</a>
+</span></span>
+<a class="cta" href="https://structurebeatsmagic.com">The family &rarr;</a></nav></div></header>
+<div class="wrap pagewrap">
+<main class="pagebody">
+<div class="eyebrow">Article</div>
+<h1>Borrowing from Data Vault Without Building One</h1>
+<div class="bw-meta">2025-09-21 · 5 min read</div>
+<p><em>How to apply the best ideas of Data Vault while staying grounded in a business-oriented, 3NF bi-temporal model</em></p>
+<p>!Borrowing from Data Vault without building one — a Data Vault door with hub, link, and satellite pieces feeding into four business-oriented pillars/borrowing-from-data-vault-without-building-one/assets/01_hero/01_hero.png)</p>
+<h2>Summary</h2>
+<blockquote><p>Data Vault has real ideas about historization, traceability, and scalability. But it&#x27;s not always the right foundation if your core is a <strong>business-oriented LDM with 3NF and bi-temporality</strong> — the source-centric shape that makes Data Vault scale can also be the thing that makes it hard to query and expensive to run.</p></blockquote>
+<blockquote><p></p></blockquote>
+<blockquote><p>In this article I show how to <strong>selectively borrow</strong> the best Data Vault concepts — hubs, links, satellites — without adopting the full methodology. Structure beats magic here too: you don&#x27;t need Data Vault&#x27;s ceremony to get its discipline, as long as you keep the structure it was protecting.</p></blockquote>
+<h2>What Data Vault Gets Right</h2>
+<p>Data Vault was designed around <strong>integration, historization, and auditability</strong>, and it earned its influence by solving real problems that older warehouse designs handled poorly. Four ideas hold up on their own merit:</p>
+<ul>
+<li><strong>Business keys in hubs</strong> — clear, stable anchor points for integration, independent of any one source system.</li>
+<li><strong>Links for relationships</strong> — associations between entities modeled explicitly, not buried in foreign keys that only make sense inside one source.</li>
+<li><strong>Satellites for history</strong> — attribute-level historization that can evolve independently of the entity it describes.</li>
+<li><strong>Auditability</strong> — full lineage back to source, which matters the moment compliance or a regulator asks &quot;where did this number come from.&quot;</li>
+</ul>
+<p>These aren&#x27;t quirks of the methodology — they&#x27;re good data modeling, and that&#x27;s exactly why I keep reaching for them even outside a Data Vault project.</p>
+<h2>Where Literal Data Vault Breaks Down</h2>
+<p>The trouble isn&#x27;t the ideas. It&#x27;s what happens when you turn all four into a mandatory, wall-to-wall pattern applied everywhere, on every entity, regardless of fit. In practice I&#x27;ve seen the same three failure modes recur:</p>
+<ul>
+<li>It drifts <strong>source-centric</strong>. Hubs proliferate around what the source systems happen to expose, not around what the business actually means by &quot;customer&quot; or &quot;agreement.&quot;</li>
+<li>The <strong>hub/link/satellite count compounds</strong>. What was three tables in a 3NF model becomes a dozen Data Vault objects, and every one of them needs its own load pattern, tests, and lineage.</li>
+<li>Retrieval gets expensive without a <strong>business-shaped integration layer</strong> on top. Analysts querying raw Data Vault tables end up re-deriving the business view every time, because the vault itself was never meant to be queried directly.</li>
+</ul>
+<p>None of this is a knock on Data Vault as a methodology — it&#x27;s a warning about applying any methodology past the point where it&#x27;s earning its cost. I worked through this tension in more depth in <a href="https://staging2.jacovanderlaan.com/how-hans-hultgren-and-ensemble-modeling-influenced-my-data-architecture-philosophy/">How Hans Hultgren and Ensemble Modeling Influenced My Data Architecture Philosophy</a> — ensemble modeling shaped how I think about integration, without me adopting the entire Data Vault stack to get there.</p>
+<h2>Borrowing the Good, Skipping the Baggage</h2>
+<p>In practice, we don&#x27;t &quot;do Data Vault.&quot; We keep a business-oriented LDM as the backbone and borrow four Data Vault ideas into it, each mapped onto something that already exists in the model:</p>
+<ul>
+<li><strong>Hubs</strong> → the business entities already defined in the LDM (Customer, Product, Agreement). No separate hub layer — the entity <em>is</em> the anchor.</li>
+<li><strong>Links</strong> → relationships already explicit in the enterprise ontology (Customer–Agreement, Product–Event). If the relationship matters to the business, it&#x27;s already modeled; Data Vault just confirms it deserves its own object.</li>
+<li><strong>Satellites</strong> → <strong>bi-temporal SCD2 historization</strong> on the entity itself, which I laid out in <a href="https://staging2.jacovanderlaan.com/from-historization-to-exposure-building-a-usable-data-platform-with-dual-scd2/">From Historization to Exposure: Building a Usable Data Platform with Dual SCD2</a>. This is where <strong>dual SCD2</strong> does the same job a satellite would, without a second physical layer to maintain.</li>
+<li><strong>Metadata-driven mapping</strong> → the automation backbone, in line with <a href="https://staging2.jacovanderlaan.com/metadata-driven-data-architecture-leveraging-draw-io-and-vscode-for-scalable-design/">Metadata-Driven Data Architecture: Leveraging draw.io and VSCode for Scalable Design</a>. This is the tool-extender part: draw.io and VSCode aren&#x27;t Data Vault tools, but the metadata they capture drives the same kind of deterministic, repeatable mapping Data Vault automation promises.</li>
+</ul>
+<p>The result reads like Data Vault&#x27;s discipline applied to a <strong>business-shaped integration layer</strong> instead of a source-shaped one — you get the traceability without paying for a parallel object model.</p>
+<h2>DV in the Four Pillars</h2>
+<p>Selective borrowing isn&#x27;t a one-off trick — it fits directly into the four-pillar shape this series has been building:</p>
+<ul>
+<li><strong>Business-Oriented LDM (Pillar 1)</strong> keeps hubs and links anchored in business meaning, not source topology.</li>
+<li><strong>Model-Driven Engineering (Pillar 2)</strong> automates the Data-Vault-inspired mappings so satellites and links don&#x27;t become hand-maintained overhead.</li>
+<li><strong>Business-Friendly Mapping (Pillar 3)</strong> keeps lineage and historization legible to business users, not just to the engineers who built the pipeline.</li>
+<li><strong>UDMs (Pillar 4)</strong> give hubs and links a universal shape to connect back to, so the same pattern repeats across domains instead of being reinvented per project.</li>
+</ul>
+<p>Treated this way, Data Vault ideas stop being a competing methodology and become tools inside a <strong>model-driven data architecture</strong> that was already business-first to begin with.</p>
+<h2>Where We&#x27;re Headed</h2>
+<p>Part 5 moves from concept to mechanism: how <strong>model-driven engineering</strong> — draw.io, VSCode, and metadata automation working together — turns everything in this article from a design principle into something that actually generates code.</p>
+<h2>Key Takeaways</h2>
+<ul>
+<li>Data Vault&#x27;s real contribution is design discipline: hubs, links, satellites, and auditability are good ideas independent of the methodology around them.</li>
+<li>Literal, wall-to-wall Data Vault creates <strong>overhead and source-centricity</strong> once it&#x27;s applied past the point of business fit.</li>
+<li>Borrowing selectively keeps Data Vault&#x27;s strengths while anchoring everything in a <strong>3NF, bi-temporal, business-oriented model</strong> — dual SCD2 does the satellite&#x27;s job without a second layer.</li>
+<li>This isn&#x27;t a workaround — it&#x27;s how Data Vault ideas integrate into the four-pillar, model-driven architecture the rest of this series builds toward.</li>
+</ul>
+<p>---</p>
+<p>✍️ <em>This article is Part 4 of the series <strong>&quot;Why Elephants Matter in Data Modeling,&quot;</strong> where I explore how John Giles&#x27; ideas, Len Silverston&#x27;s Universal Data Models, and my own methodology come together in a business-first, model-driven approach.</em></p>
+<p><strong>Series overview</strong></p>
+<ul>
+<li>Part 1: <a href="https://jacovanderlaan.com/why-elephants-matter-in-data-modeling"><em>Why Elephants Matter in Data Modeling</em></a></li>
+<li>Part 2: <a href="https://staging2.jacovanderlaan.com/patterns-universals-the-foundations-of-reuse/"><em>Patterns + Universals: The Foundations of Reuse</em></a></li>
+<li>Part 3: <a href="https://staging2.jacovanderlaan.com/from-ontology-to-enterprise-view/"><em>From Ontology to Enterprise View</em></a></li>
+<li>Part 4: <a href="https://staging2.jacovanderlaan.com/borrowing-from-data-vault-without-building-one/"><em>Borrowing from Data Vault Without Building One</em></a></li>
+<li>Part 5: <a href="https://staging2.jacovanderlaan.com/model-driven-engineering-in-practice/"><em>Model-Driven Engineering in Practice</em></a></li>
+<li>Part 6: <a href="https://staging2.jacovanderlaan.com/business-friendly-mapping-as-a-collaboration-tool/"><em>Business-Friendly Mapping as a Collaboration Tool</em></a></li>
+<li>Part 7: <a href="https://staging2.jacovanderlaan.com/the-four-pillars-of-business-centered-data-architecture/"><em>The Four Pillars of Business-Centered Data Architecture</em></a></li>
+</ul>
+<p style="margin-top:34px"><a href="index.html">&larr; All articles</a></p>
+</main></div>
+<footer><div class="wrap"><p><span class="badge">Test phase</span> &nbsp;
+Part of the <a href="https://structurebeatsmagic.com">Structure Beats Magic</a> family.</p></div></footer>
+<script type="module">
+  import { initDetail } from "../assets/detail.js";
+  initDetail();
+</script>
+</body></html>

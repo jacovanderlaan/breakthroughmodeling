@@ -1,0 +1,22 @@
+<div id="browse" data-page-type="articles"></div>
+<div class="bw-fallback">
+  <p class="muted">All items:</p>
+  <ul class="artlist">
+    <li><a href="../articles/borrowing-from-data-vault-without-building-one.html">Borrowing from Data Vault Without Building One</a> &mdash; <span class="muted">Hubs, links, and satellites are good ideas. A full Data Vault implementation is a commitment. Here&#x27;s how to ta</span></li>
+    <li><a href="../articles/crossbreeze-and-the-future-of-model-driven-data-engineering.html">CrossBreeze and the Future of Model-Driven Data Engineering</a> &mdash; <span class="muted">Why tools, philosophy, and bright people matter for building tomorrow’s data platforms Press enter or click to</span></li>
+    <li><a href="../articles/ensemble-modeling-vs-business-oriented-data-modeling-two-paths-to-better-data-models.html">Ensemble Modeling vs. Business-Oriented Data Modeling: Two Paths to Better Data Models</a> &mdash; <span class="muted">Hultgren gives you a model that survives change. Sharp gives you a model the business actually understands. Yo</span></li>
+    <li><a href="../articles/from-data-vault-to-bi-temporal-3nf-a-simpler-path-to-governed-data-platforms.html">From Data Vault to Bi-Temporal 3NF: A Simpler Path to Governed Data Platforms</a> &mdash; <span class="muted">Keep the discipline banks need, drop the vocabulary they don&#x27;t</span></li>
+    <li><a href="../articles/from-whiteboards-to-working-models-how-we-built-a-model-driven-data-warehouse-at-de-volksbank-with.html">From Whiteboards to Working Models: How We Built a Model-Driven Data Warehouse at de Volksbank with CrossBreeze</a> &mdash; <span class="muted">Replacing a Risk &amp; Finance DWH under ECB/DNB pressure — and why the model, not the magic, made it repeatable</span></li>
+  </ul>
+</div>
+<script type="module">
+  import { initBrowse } from "../assets/browse.js";
+  initBrowse("#browse", {
+    data: "../data/content_item.parquet",
+    base: "../",
+    assets: "../articles/",
+    pageType: "articles",
+    itemTypes: ["post"],
+    defaults: {"view": "list", "sort": "newest"}
+  }).then(() => document.body.classList.add("bw-ready"));
+</script>
