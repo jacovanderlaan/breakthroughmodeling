@@ -379,7 +379,12 @@ code{background:var(--code);padding:.12em .38em;border-radius:5px;font-size:.9em
 header.site{border-bottom:1px solid var(--line);position:sticky;top:0;z-index:10;
   background:color-mix(in srgb,var(--bg) 88%,transparent);backdrop-filter:blur(8px)}
 header.site .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;height:60px}
-.brand{font-weight:800;color:var(--fg);letter-spacing:-.02em;font-size:1.02rem;white-space:nowrap;flex:0 0 auto}
+.brand{font-weight:800;color:var(--fg);letter-spacing:-.02em;font-size:1.02rem;white-space:nowrap;flex:0 0 auto;
+  display:inline-flex;align-items:center;gap:9px;text-decoration:none}
+/* The mark sits at cap-height so it optically aligns with the wordmark rather
+   than the line box, which sits lower. 22px is the smallest size at which the
+   gold diamond still reads as a diamond. */
+.brand svg{width:22px;height:22px;flex:0 0 auto;display:block}
 .brand .abbr{color:var(--accent)}
 
 /* hero */
