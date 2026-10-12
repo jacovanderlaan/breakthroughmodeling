@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="robots" content="noindex, nofollow" /><!-- TESTPHASE-NOINDEX: remove at go-live -->
+<title>Caveats As Context — Breakthrough Modeling</title>
+<meta name="description" content="Record what analysts know and definitions leave out (restatements, known spikes, broken periods, how fresh is fresh enough) next to the model, so an agent inherits the caveats instead of rediscovering them the hard way." />
+<link rel="canonical" href="https://breakthroughmodeling.com/concepts/caveats-as-context.html" />
+<meta property="og:title" content="Caveats As Context" />
+<meta property="og:description" content="Record what analysts know and definitions leave out (restatements, known spikes, broken periods, how fresh is fresh enough) next to the model, so an agent inherits the caveats instead of rediscovering them the hard way." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://breakthroughmodeling.com/concepts/caveats-as-context.html" />
+<meta property="og:site_name" content="Breakthrough Modeling" />
+<meta name="twitter:card" content="summary" />
+<link rel="icon" href="../assets/favicon.svg" type="image/svg+xml" />
+<link rel="stylesheet" href="../assets/site.css" />
+</head>
+<body>
+<header class="site">
+  <div class="wrap">
+    <a class="brand" href="../index.html">Breakthrough <span class="abbr">Modeling</span></a>
+<nav class="main">
+<span class="navgroup"><button class="navtop" type="button" aria-haspopup="true">Overview</button><span class="navmenu">
+<a href="../overview/index.html#impasse">The impasse</a>
+<a href="../overview/index.html#return">Why modeling came back</a>
+<a href="../overview/index.html#process">The process is stuck too</a>
+<a href="../overview/index.html#breakthrough">The breakthrough</a>
+<a href="../overview/index.html#old-wine">Old wine in new bottles?</a>
+<a href="../overview/index.html#what-it-is">What BTM actually is</a>
+<a href="../overview/index.html#model">The model behind it</a>
+<a href="../overview/index.html#more-than-structure">More than a data model</a>
+<a href="../overview/index.html#attitude">A new attitude</a>
+</span></span>
+<span class="navgroup"><button class="navtop on" type="button" aria-haspopup="true">Methodology</button><span class="navmenu">
+<a href="../concepts/index.html">Concepts</a>
+<a href="../patterns/index.html">Patterns</a>
+<a href="../glossary/index.html">Glossary</a>
+</span></span>
+<span class="navgroup"><button class="navtop" type="button" aria-haspopup="true">Writing</button><span class="navmenu">
+<a href="../articles/index.html">Articles</a>
+<a href="../ideas/index.html">Inspiration</a>
+<a href="../references.html">References</a>
+</span></span>
+<span class="navgroup"><button class="navtop" type="button" aria-haspopup="true">Practice</button><span class="navmenu">
+<a href="../skills/index.html">Skills</a>
+<a href="../decisions/index.html">Decisions</a>
+</span></span>
+<a class="navtop" href="../timeline/index.html">Timeline</a>
+<span class="navgroup"><button class="navtop" type="button" aria-haspopup="true">About</button><span class="navmenu">
+<a href="../about/index.html">About Jaco</a>
+<a href="../family/index.html">The family</a>
+<a href="../workshops/index.html">Services</a>
+<a href="../wake-up/index.html">The wake-up call</a>
+</span></span>
+<a class="cta" href="https://structurebeatsmagic.com">The family &rarr;</a></nav>
+  </div>
+</header>
+<div class="hero wrap" style="padding-bottom:20px">
+  <div class="eyebrow"><span class="key-badge">Key concept</span> Delivery & method</div>
+  <h1>Caveats As Context</h1>
+  <p class="sub">Record what analysts know and definitions leave out (restatements, known spikes, broken periods, how fresh is fresh enough) next to the model, so an agent inherits the caveats instead of rediscovering them the hard way.</p>
+</div>
+<section class="wrap">
+
+<p>> Record what analysts know and definitions leave out (restatements, known spikes, broken periods, how fresh is fresh enough) next to the model, so an agent inherits the caveats instead of rediscovering them the hard way.</p>
+<p>Thomas in't Veld draws the line: a semantic layer is not a context layer. The definition of revenue tells an agent what revenue means. It does not tell it that March was restated, that the November spike is real and not a load error, or that one region's figures before 2024 come from another system. An analyst knows those things, and an agent asked the same question does not.</p>
+<p>Caveats as Context makes that knowledge a modelled object: a dated, owned record attached to the element it concerns, whether that is a table, a metric, a source or a period. AngelList's AI analyst, described by Isin Pesch, runs on markdown documentation with exactly such a gotcha list and no semantic layer at all. Freshness belongs here too. Whether data must be real-time depends on the decision it serves, so *fresh enough* is a caveat per decision, not a platform setting.</p>
+<p>The supply is already there. Every incident that is resolved under <a href="incident-modeling.html">Incident Modeling</a> should leave a caveat behind, and every <a href="delivery-calendars.html">delivery calendar</a> exception is one. The incident records what went wrong; the caveat records what anyone reading this data from now on must know.</p>
+<div class="c-rel c-key"><h3>Key concepts</h3><ul><li><a href="incident-modeling.html">Incident Modeling</a></li><li><a href="delivery-calendars.html">Delivery Calendars</a></li><li><a href="company-brain.html">Company Brain</a></li></ul></div>
+  <p style="margin-top:34px"><a href="index.html">&larr; All concepts</a></p>
+</section>
+<script type="module">
+  import { initDetail } from "../assets/detail.js";
+  initDetail();
+</script>
+<footer><div class="wrap">
+  <p><span class="badge">Test phase</span> &nbsp; Part of the <a href="https://structurebeatsmagic.com">Structure Beats Magic</a> family.</p>
+</div></footer>
+</body>
+</html>

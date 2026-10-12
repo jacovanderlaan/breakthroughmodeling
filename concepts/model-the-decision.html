@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="robots" content="noindex, nofollow" /><!-- TESTPHASE-NOINDEX: remove at go-live -->
+<title>Model The Decision — Breakthrough Modeling</title>
+<meta name="description" content="Data models describe what exists; a decision model describes what you do with it — which question is asked, from which inputs, under which rules, with which outcome. Model the decision too (DMN), and AI gets a place inside it instead of in place of it." />
+<link rel="canonical" href="https://breakthroughmodeling.com/concepts/model-the-decision.html" />
+<meta property="og:title" content="Model The Decision" />
+<meta property="og:description" content="Data models describe what exists; a decision model describes what you do with it — which question is asked, from which inputs, under which rules, with which outcome. Model the decision too (DMN), and AI gets a place inside it instead of in place of it." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://breakthroughmodeling.com/concepts/model-the-decision.html" />
+<meta property="og:site_name" content="Breakthrough Modeling" />
+<meta name="twitter:card" content="summary" />
+<link rel="icon" href="../assets/favicon.svg" type="image/svg+xml" />
+<link rel="stylesheet" href="../assets/site.css" />
+</head>
+<body>
+<header class="site">
+  <div class="wrap">
+    <a class="brand" href="../index.html">Breakthrough <span class="abbr">Modeling</span></a>
+<nav class="main">
+<span class="navgroup"><button class="navtop" type="button" aria-haspopup="true">Overview</button><span class="navmenu">
+<a href="../overview/index.html#impasse">The impasse</a>
+<a href="../overview/index.html#return">Why modeling came back</a>
+<a href="../overview/index.html#process">The process is stuck too</a>
+<a href="../overview/index.html#breakthrough">The breakthrough</a>
+<a href="../overview/index.html#old-wine">Old wine in new bottles?</a>
+<a href="../overview/index.html#what-it-is">What BTM actually is</a>
+<a href="../overview/index.html#model">The model behind it</a>
+<a href="../overview/index.html#more-than-structure">More than a data model</a>
+<a href="../overview/index.html#attitude">A new attitude</a>
+</span></span>
+<span class="navgroup"><button class="navtop on" type="button" aria-haspopup="true">Methodology</button><span class="navmenu">
+<a href="../concepts/index.html">Concepts</a>
+<a href="../patterns/index.html">Patterns</a>
+<a href="../glossary/index.html">Glossary</a>
+</span></span>
+<span class="navgroup"><button class="navtop" type="button" aria-haspopup="true">Writing</button><span class="navmenu">
+<a href="../articles/index.html">Articles</a>
+<a href="../ideas/index.html">Inspiration</a>
+<a href="../references.html">References</a>
+</span></span>
+<span class="navgroup"><button class="navtop" type="button" aria-haspopup="true">Practice</button><span class="navmenu">
+<a href="../skills/index.html">Skills</a>
+<a href="../decisions/index.html">Decisions</a>
+</span></span>
+<a class="navtop" href="../timeline/index.html">Timeline</a>
+<span class="navgroup"><button class="navtop" type="button" aria-haspopup="true">About</button><span class="navmenu">
+<a href="../about/index.html">About Jaco</a>
+<a href="../family/index.html">The family</a>
+<a href="../workshops/index.html">Services</a>
+<a href="../wake-up/index.html">The wake-up call</a>
+</span></span>
+<a class="cta" href="https://structurebeatsmagic.com">The family &rarr;</a></nav>
+  </div>
+</header>
+<div class="hero wrap" style="padding-bottom:20px">
+  <div class="eyebrow"><span class="key-badge">Key concept</span> Method</div>
+  <h1>Model The Decision</h1>
+  <p class="sub">Data models describe what exists; a decision model describes what you do with it — which question is asked, from which inputs, under which rules, with which outcome. Model the decision too (DMN), and AI gets a place inside it instead of in place of it.</p>
+</div>
+<section class="wrap">
+
+<p>> Data models describe what exists; a decision model describes what you do with it — which question is asked, from which inputs, under which rules, with which outcome. Model the decision too, and AI gets a place inside it instead of in place of it.</p>
+<p>Most modeling work stops at the data: entities, attributes, relationships, a glossary. The decisions the business takes *on* that data — approve this claim, route this ticket, flag this invoice — usually live in someone's head, in a spreadsheet of exceptions, or buried in code. That is the <a href="decision-black-box.html">Decision Black Box</a>: the outcome is recorded, the logic is not.</p>
+<p>The OMG standard <strong>DMN (Decision Model and Notation)</strong> gives the decision its own model, at two levels. A <strong>decision requirements diagram</strong> shows which decisions exist, which input data and which sub-decisions each one needs, and which knowledge sources (a policy, a regulation, an expert) define it. Underneath, the <strong>decision logic</strong> — most often a decision table: conditions in columns, one rule per row, a hit policy saying what happens when several rules match — states exactly how the outcome follows from the inputs. Business people can read it, and the same table can be executed.</p>
+<p>This matters more now that AI makes decisions cheap. A typed AI model (an LLM with structured output, or a classifier like TypeSafe's Jev) is very good at the *fuzzy input* — "is this email a complaint?", "which category is this receipt?" — and unreliable at the *logic* — "complaint plus premium customer plus second time this month means call within a day". In a decision model the fuzzy questions become input decisions answered by the model, with a confidence threshold; the logic stays in the table, versioned like any <a href="rules-as-data.html">rule as data</a>; and low-confidence cases route to a person. The model reads; the table decides.</p>
+<p>It also makes the modeling prerequisite visible. The options an AI may choose from are a controlled vocabulary that has to be designed with the business — an independent test of Jev found that swapping the option labels changed a third of its answers. The glossary, the decision table and the label set are one piece of work.</p>
+<h3>Beyond the decision table: rulings, approvals and intent</h3>
+<p>The decision table covers decisions that run every day. A second kind of decision is taken once and then governs the model: a ruling on how to treat a case, an approval of a mapping, the intent behind a boundary. These belong in the model too, versioned with the logic they govern. Peter Avenant observes that a silver layer rarely stalls on hard logic; it stalls on decisions nobody has taken, so *silver is a decision, not a transformation*. In another post he shows an approval that did not survive a source change, because it lived in a tool and not in versioned metadata. Andrew Smailes argues for scoping semantic layers by the business decisions they serve rather than by a glossary. Simon Späti names the cost for AI-built systems: when nobody knows the system, the intent behind it is gone. Every ruling, approval and decided boundary is a model element with a date, an owner and a reason, which is the positive form of the <a href="decision-black-box.html">Decision Black Box</a> and the data-level sibling of Architectural Decision Records.</p>
+<p>Sources (added 11 Oct 2026, when Jaco adopted the *Decision Modeling* family from the Curated Sources clustering into this concept):</p>
+<p>- Peter Avenant — Silver layer stalls on missing decisions, not hard logic · [original](https://www.linkedin.com/posts/peteravenant_the-medallion-diagram-you-never-saw-share-7502632678689669120-oKOg/)
+- Peter Avenant — Meaning leaks at every metadata handoff between tools · [original](https://www.linkedin.com/posts/peteravenant_meaning-leaks-at-every-handoff-share-7510495987774332928-0seS/)
+- Andrew Smailes — Start semantic layers from business decisions, not glossaries · [original](https://www.linkedin.com/posts/andrew-smailes_semanticcontrol-enterprisemeaning-datadesign-share-7480053389104701440-0Y5l/)
+- Simon Späti — AI code problem is that nobody knows the system · [original](https://www.linkedin.com/posts/sspaeti_this-landed-1-on-hn-yesterday-%F0%9D%99%92%F0%9D%99%A7%F0%9D%99%9E%F0%9D%99%A9%F0%9D%99%9E%F0%9D%99%A3%F0%9D%99%9C-share-7510602691463647233-qDbH/)</p>
+<div class="c-rel c-key"><h3>Key concepts</h3><ul><li><a href="rules-as-data.html">Rules As Data</a></li><li><a href="decision-black-box.html">Decision Black Box</a></li></ul></div>
+  <p style="margin-top:34px"><a href="index.html">&larr; All concepts</a></p>
+</section>
+<script type="module">
+  import { initDetail } from "../assets/detail.js";
+  initDetail();
+</script>
+<footer><div class="wrap">
+  <p><span class="badge">Test phase</span> &nbsp; Part of the <a href="https://structurebeatsmagic.com">Structure Beats Magic</a> family.</p>
+</div></footer>
+</body>
+</html>

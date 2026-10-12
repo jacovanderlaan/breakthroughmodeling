@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="robots" content="noindex, nofollow" /><!-- TESTPHASE-NOINDEX: remove at go-live -->
+<title>Context As Projection — Breakthrough Modeling</title>
+<meta name="description" content="Agent context is generated from the governed model, the way a data mart is generated from the warehouse, and never hand-written per prompt or per bundle. Model the meaning once and project it to every consumer that needs it." />
+<link rel="canonical" href="https://breakthroughmodeling.com/concepts/context-as-projection.html" />
+<meta property="og:title" content="Context As Projection" />
+<meta property="og:description" content="Agent context is generated from the governed model, the way a data mart is generated from the warehouse, and never hand-written per prompt or per bundle. Model the meaning once and project it to every consumer that needs it." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://breakthroughmodeling.com/concepts/context-as-projection.html" />
+<meta property="og:site_name" content="Breakthrough Modeling" />
+<meta name="twitter:card" content="summary" />
+<link rel="icon" href="../assets/favicon.svg" type="image/svg+xml" />
+<link rel="stylesheet" href="../assets/site.css" />
+</head>
+<body>
+<header class="site">
+  <div class="wrap">
+    <a class="brand" href="../index.html">Breakthrough <span class="abbr">Modeling</span></a>
+<nav class="main">
+<span class="navgroup"><button class="navtop" type="button" aria-haspopup="true">Overview</button><span class="navmenu">
+<a href="../overview/index.html#impasse">The impasse</a>
+<a href="../overview/index.html#return">Why modeling came back</a>
+<a href="../overview/index.html#process">The process is stuck too</a>
+<a href="../overview/index.html#breakthrough">The breakthrough</a>
+<a href="../overview/index.html#old-wine">Old wine in new bottles?</a>
+<a href="../overview/index.html#what-it-is">What BTM actually is</a>
+<a href="../overview/index.html#model">The model behind it</a>
+<a href="../overview/index.html#more-than-structure">More than a data model</a>
+<a href="../overview/index.html#attitude">A new attitude</a>
+</span></span>
+<span class="navgroup"><button class="navtop on" type="button" aria-haspopup="true">Methodology</button><span class="navmenu">
+<a href="../concepts/index.html">Concepts</a>
+<a href="../patterns/index.html">Patterns</a>
+<a href="../glossary/index.html">Glossary</a>
+</span></span>
+<span class="navgroup"><button class="navtop" type="button" aria-haspopup="true">Writing</button><span class="navmenu">
+<a href="../articles/index.html">Articles</a>
+<a href="../ideas/index.html">Inspiration</a>
+<a href="../references.html">References</a>
+</span></span>
+<span class="navgroup"><button class="navtop" type="button" aria-haspopup="true">Practice</button><span class="navmenu">
+<a href="../skills/index.html">Skills</a>
+<a href="../decisions/index.html">Decisions</a>
+</span></span>
+<a class="navtop" href="../timeline/index.html">Timeline</a>
+<span class="navgroup"><button class="navtop" type="button" aria-haspopup="true">About</button><span class="navmenu">
+<a href="../about/index.html">About Jaco</a>
+<a href="../family/index.html">The family</a>
+<a href="../workshops/index.html">Services</a>
+<a href="../wake-up/index.html">The wake-up call</a>
+</span></span>
+<a class="cta" href="https://structurebeatsmagic.com">The family &rarr;</a></nav>
+  </div>
+</header>
+<div class="hero wrap" style="padding-bottom:20px">
+  <div class="eyebrow"><span class="key-badge">Key concept</span> Architecture</div>
+  <h1>Context As Projection</h1>
+  <p class="sub">Agent context is generated from the governed model, the way a data mart is generated from the warehouse, and never hand-written per prompt or per bundle. Model the meaning once and project it to every consumer that needs it.</p>
+</div>
+<section class="wrap">
+
+<p>> Agent context is generated from the governed model, the way a data mart is generated from the warehouse, and never hand-written per prompt or per bundle. Model the meaning once and project it to every consumer that needs it.</p>
+<p>Ronald Baan calls it the reconstruction tax: every report, every application and now every agent reconstructs what the data means at the point of use. Context files repeat the pattern. A `CLAUDE.md`, a system prompt or an Open Knowledge Format bundle is usually a hand-written copy of meaning that already exists somewhere else, and like every copy it drifts.</p>
+<p>Data warehousing solved this shape decades ago: sources feed one integrated model, and the marts are generated from it. Context as Projection applies the same pattern to agent context. The governed model and its metadata form the knowledge plane (Juan Sequeda's term), and every context bundle is a generated projection of that plane for one consumer. Pierre Bonnet's warning about OKF is this principle stated from the other side: knowledge bundles fragment the organisation's knowledge unless they are projections of governed knowledge. Treated as a projection, a context bundle is a delivery like any other, with lineage back to the model and regenerated when the model changes.</p>
+<p>The consequence is a working rule: you do not edit the bundle. You fix the model and project again. The test is simple: can every piece of agent context be regenerated from the model? Where it cannot, meaning is held by hand, and it will drift.</p>
+<div class="c-rel c-key"><h3>Key concepts</h3><ul><li><a href="company-brain.html">Company Brain</a></li><li><a href="metadata-first.html">Metadata First</a></li></ul></div>
+  <p style="margin-top:34px"><a href="index.html">&larr; All concepts</a></p>
+</section>
+<script type="module">
+  import { initDetail } from "../assets/detail.js";
+  initDetail();
+</script>
+<footer><div class="wrap">
+  <p><span class="badge">Test phase</span> &nbsp; Part of the <a href="https://structurebeatsmagic.com">Structure Beats Magic</a> family.</p>
+</div></footer>
+</body>
+</html>

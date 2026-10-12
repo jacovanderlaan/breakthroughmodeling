@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="robots" content="noindex, nofollow" /><!-- TESTPHASE-NOINDEX: remove at go-live -->
+<title>Eval Driven Modeling — Breakthrough Modeling</title>
+<meta name="description" content="Every model and every AI-generated mapping ships with the checks that prove it, written together with the model and not after the first failure. The AI-era sibling of Shift-Left and Trust but Verify." />
+<link rel="canonical" href="https://breakthroughmodeling.com/concepts/eval-driven-modeling.html" />
+<meta property="og:title" content="Eval Driven Modeling" />
+<meta property="og:description" content="Every model and every AI-generated mapping ships with the checks that prove it, written together with the model and not after the first failure. The AI-era sibling of Shift-Left and Trust but Verify." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://breakthroughmodeling.com/concepts/eval-driven-modeling.html" />
+<meta property="og:site_name" content="Breakthrough Modeling" />
+<meta name="twitter:card" content="summary" />
+<link rel="icon" href="../assets/favicon.svg" type="image/svg+xml" />
+<link rel="stylesheet" href="../assets/site.css" />
+</head>
+<body>
+<header class="site">
+  <div class="wrap">
+    <a class="brand" href="../index.html">Breakthrough <span class="abbr">Modeling</span></a>
+<nav class="main">
+<span class="navgroup"><button class="navtop" type="button" aria-haspopup="true">Overview</button><span class="navmenu">
+<a href="../overview/index.html#impasse">The impasse</a>
+<a href="../overview/index.html#return">Why modeling came back</a>
+<a href="../overview/index.html#process">The process is stuck too</a>
+<a href="../overview/index.html#breakthrough">The breakthrough</a>
+<a href="../overview/index.html#old-wine">Old wine in new bottles?</a>
+<a href="../overview/index.html#what-it-is">What BTM actually is</a>
+<a href="../overview/index.html#model">The model behind it</a>
+<a href="../overview/index.html#more-than-structure">More than a data model</a>
+<a href="../overview/index.html#attitude">A new attitude</a>
+</span></span>
+<span class="navgroup"><button class="navtop on" type="button" aria-haspopup="true">Methodology</button><span class="navmenu">
+<a href="../concepts/index.html">Concepts</a>
+<a href="../patterns/index.html">Patterns</a>
+<a href="../glossary/index.html">Glossary</a>
+</span></span>
+<span class="navgroup"><button class="navtop" type="button" aria-haspopup="true">Writing</button><span class="navmenu">
+<a href="../articles/index.html">Articles</a>
+<a href="../ideas/index.html">Inspiration</a>
+<a href="../references.html">References</a>
+</span></span>
+<span class="navgroup"><button class="navtop" type="button" aria-haspopup="true">Practice</button><span class="navmenu">
+<a href="../skills/index.html">Skills</a>
+<a href="../decisions/index.html">Decisions</a>
+</span></span>
+<a class="navtop" href="../timeline/index.html">Timeline</a>
+<span class="navgroup"><button class="navtop" type="button" aria-haspopup="true">About</button><span class="navmenu">
+<a href="../about/index.html">About Jaco</a>
+<a href="../family/index.html">The family</a>
+<a href="../workshops/index.html">Services</a>
+<a href="../wake-up/index.html">The wake-up call</a>
+</span></span>
+<a class="cta" href="https://structurebeatsmagic.com">The family &rarr;</a></nav>
+  </div>
+</header>
+<div class="hero wrap" style="padding-bottom:20px">
+  <div class="eyebrow"><span class="key-badge">Key concept</span> AI & innovation</div>
+  <h1>Eval Driven Modeling</h1>
+  <p class="sub">Every model and every AI-generated mapping ships with the checks that prove it, written together with the model and not after the first failure. The AI-era sibling of Shift-Left and Trust but Verify.</p>
+</div>
+<section class="wrap">
+
+<p>> Every model and every AI-generated mapping ships with the checks that prove it, written together with the model and not after the first failure. The AI-era sibling of Shift-Left and Trust but Verify.</p>
+<p>When AI proposes an entity, a mapping or a definition, the proposal reads well whether it is right or wrong. Eval-Driven Modeling makes the proof part of the proposal: the mapping comes with example rows that must map this way, plausibility checks on the result, and the known counter-examples it must reject. A proposal without its checks is not ready for review.</p>
+<p>The evals community made this a discipline for LLM output. Hamel Husain builds evals from error analysis, Eugene Yan writes about evaluation in production, and Shreya Shankar's research asks *who validates the validators?*: a check written by an LLM needs its own human-labelled sample before anyone trusts it. Applied to modelling, that gives the order of work. Write the cases first, let the AI propose, run the cases, and send whatever fails or stays uncertain to a person.</p>
+<p>It extends two existing principles. <a href="shift-left.html">Shift-Left</a> moves checks to development time; Eval-Driven Modeling moves them to the moment the model is *proposed*. <a href="trust-but-verify.html">Trust but Verify</a> says to check anyway; this says what the check is and who wrote it. The Validation Loop gives the cycle, and the evals are what goes into it first.</p>
+<div class="c-rel c-key"><h3>Key concepts</h3><ul><li><a href="trust-but-verify.html">Trust But Verify</a></li><li><a href="shift-left.html">Shift Left</a></li><li><a href="data-contracts.html">Data Contracts</a></li></ul></div>
+  <p style="margin-top:34px"><a href="index.html">&larr; All concepts</a></p>
+</section>
+<script type="module">
+  import { initDetail } from "../assets/detail.js";
+  initDetail();
+</script>
+<footer><div class="wrap">
+  <p><span class="badge">Test phase</span> &nbsp; Part of the <a href="https://structurebeatsmagic.com">Structure Beats Magic</a> family.</p>
+</div></footer>
+</body>
+</html>
