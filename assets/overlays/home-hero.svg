@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 900">
+  <!-- Hybrid layer over assets/jaco-silverston-hybrid.jpg (own photo, 2017, Jaco with Len Silverston and
+       The Data Model Resource Book; shown 1200x800 from the top).
+       Story: the universal data models come back — and grow into one model of structure, movement,
+       meaning and AI, inside the Breakthrough Modeling mark: a square with one corner broken open and
+       the gold diamond escaping. Line-art in the family tokens; white halo under every stroke;
+       nothing on a face or a hand. Pattern: hybrid-photo-line-art.md (family design folder). -->
+  <defs>
+    <marker id="ah" viewBox="0 0 12 12" refX="9" refY="6" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M1 1 L10 6 L1 11" fill="none" stroke="#2563eb" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+    </marker>
+  </defs>
+
+  <!-- from the book to the model -->
+  <g fill="none" stroke-linecap="round">
+    <path d="M736 362 C 760 330, 776 300, 790 266" stroke="#ffffff" stroke-width="12" opacity=".9"/>
+    <path d="M736 362 C 760 330, 776 300, 790 266" stroke="#2563eb" stroke-width="5" marker-end="url(#ah)"/>
+  </g>
+
+  <!-- the frame: the BTM mark, a square with its lower-right corner broken open -->
+  <g fill="none" stroke-linecap="butt" stroke-linejoin="miter">
+    <path d="M1160 40 L770 40 L770 252 L1066 252 M1160 40 L1160 158" stroke="#ffffff" stroke-width="16" opacity=".9"/>
+    <path d="M1160 40 L770 40 L770 252 L1066 252 M1160 40 L1160 158" stroke="#2563eb" stroke-width="7"/>
+  </g>
+  <polygon points="770,40 1160,40 1160,158 1066,252 770,252" fill="#f7f8fa" fill-opacity=".62"/>
+  <path d="M1160 40 L770 40 L770 252 L1066 252 M1160 40 L1160 158" fill="none" stroke="#2563eb" stroke-width="7"/>
+
+  <g stroke-linejoin="round" stroke-linecap="round">
+    <!-- structure: three entities and their relationships -->
+    <line x1="868" y1="92" x2="924" y2="92" stroke="#0f172a" stroke-width="4"/>
+    <line x1="836" y1="112" x2="836" y2="164" stroke="#0f172a" stroke-width="4"/>
+    <rect x="796" y="72" width="76" height="40" rx="6" fill="#ffffff" stroke="#0f172a" stroke-width="4"/>
+    <line x1="796" y1="86" x2="872" y2="86" stroke="#0f172a" stroke-width="3"/>
+    <rect x="924" y="72" width="76" height="40" rx="6" fill="#ffffff" stroke="#0f172a" stroke-width="4"/>
+    <line x1="924" y1="86" x2="1000" y2="86" stroke="#0f172a" stroke-width="3"/>
+    <rect x="796" y="164" width="76" height="40" rx="6" fill="#ffffff" stroke="#0f172a" stroke-width="4"/>
+    <line x1="796" y1="178" x2="872" y2="178" stroke="#0f172a" stroke-width="3"/>
+
+    <!-- movement: data flowing from one entity onward -->
+    <path d="M876 184 L1000 184" fill="none" stroke="#2563eb" stroke-width="4" stroke-dasharray="2 10" marker-end="url(#ah)"/>
+    <circle cx="904" cy="184" r="5" fill="#2563eb"/>
+    <circle cx="944" cy="184" r="5" fill="#2563eb"/>
+
+    <!-- meaning: a tag on an entity -->
+    <path d="M1018 72 L1062 72 L1076 86 L1062 100 L1018 100 Z" fill="#ffffff" stroke="#2563eb" stroke-width="4"/>
+    <circle cx="1030" cy="86" r="4" fill="#2563eb"/>
+    <line x1="1000" y1="92" x2="1018" y2="88" stroke="#2563eb" stroke-width="3"/>
+
+    <!-- AI: a node that reads the whole model -->
+    <circle cx="1098" cy="170" r="24" fill="#ffffff" stroke="#0f172a" stroke-width="4"/>
+    <path d="M1098 156 L1102 166 L1112 170 L1102 174 L1098 184 L1094 174 L1084 170 L1094 166 Z" fill="#2563eb"/>
+    <path d="M1074 170 L1024 184 M1084 152 L1004 104" fill="none" stroke="#2563eb" stroke-width="3" stroke-dasharray="4 6"/>
+  </g>
+
+  <!-- the one gold highlight: the diamond escaping through the broken corner -->
+  <rect x="1104" y="206" width="38" height="38" fill="#b88a1b" stroke="#ffffff" stroke-width="4" paint-order="stroke" transform="rotate(45 1123 225)"/>
+</svg>
